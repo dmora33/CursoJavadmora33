@@ -4,7 +4,7 @@ public class HolaMundo {
 	 * @param args "hola mundo loco", numero y edad;
 	 */
 	public static void main(String[] args) {
-		System.out.println("Hola mundo LOCOOO!!!!");
+		System.out.println("Hola mundo LOCOOO2!!!!");
 		// declara una variable;
 		// tipo y nombre(camelCase) de la variable;
 		int numero;
