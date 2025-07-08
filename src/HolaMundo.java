@@ -4,8 +4,10 @@ public class HolaMundo {
 	 * @param args "hola mundo loco", numero y edad;
 	 */
 	public static void main(String[] args) {
-		System.out.println("Hola mundo LOCOOO33!!!!");
+
+		System.out.println("Hola mundo LOCOOO335!!!!");
 		System.out.println("Hola mundo LOCOOO33!");
+
 		// declara una variable;
 		// tipo y nombre(camelCase) de la variable;
 		int numero;
@@ -17,6 +19,8 @@ public class HolaMundo {
 		System.out.println("10" + numero + edad);
 		// el codigo entre parentesis se eje. antes;
 		System.out.println("resultado:" + " " + (numero + edad));
+				System.out.println("Hola mundo LOOO233!!!!");
+
 	}
 
 }
