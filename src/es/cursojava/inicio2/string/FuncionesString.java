@@ -56,6 +56,11 @@ public class FuncionesString {
 
 		// como hacer que saque solo la última palabar de la cadena??
 		System.out.println(cadena.substring(cadena.lastIndexOf(" ") + 1)); // IMPORTANTE
+
+		// FUNCION SPLIT busca las coincidencias de la expresión regular en la cadena y
+		// retoma un arry de las subcadenas comprendidas entre ellas.
+		
+
 	}
 
 }
