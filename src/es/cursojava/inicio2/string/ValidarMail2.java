@@ -14,30 +14,32 @@ import java.util.Scanner;
  */
 public class ValidarMail2 {
 
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String mensajeDeError = "";
-
 		// entrada
 		do {
 			// reinicializo el mensaje de error vacio para que pueda salir en caso de no dar
 			// errores.
 			mensajeDeError = "";
-
 			Scanner scan = new Scanner(System.in);
 			System.out.println("introduce tu mail:");
 			String email = scan.nextLine();
+			//quitamos los espacios en blanco
+			email=email.trim();
 			int longitudEmail = email.length();
 
 			System.out.println(email);
 			// Que no tenga espacios en blanco
 			if (email.contains(" ")) {
-				mensajeDeError += "- No puede haber espacios en blanco.\n";
+				mensajeDeError = "- No puede haber espacios en blanco.\n";
 				System.out.println(mensajeDeError);
 			}
-			// else {
-			// System.out.println("no tiene espacios");
-			// }
 			// Que despues del último punto haya entre 2 y 6 caracteres
 			int posicionPunto = 0;
 			String subEmail = "";
@@ -47,7 +49,6 @@ public class ValidarMail2 {
 				System.out.println(mensajeDeError);
 				// si no hay punto no continuo dara errores de posición
 				continue;
-
 			}
 			posicionPunto = email.lastIndexOf(".");
 			subEmail = email.substring(posicionPunto);
@@ -56,42 +57,27 @@ public class ValidarMail2 {
 			if (longitudSubEmail > 6 && longitudSubEmail < 2) {
 				mensajeDeError += "- despues del último punto no cumple entre 2 y 6 carácteres.\n";
 				System.out.println(mensajeDeError);
-
-			} else {
-				// System.out.println("esta entre los valores 2 y 6");
-			}
-			// que el resultado de la busqueda de la posición de @ tanto por el principio y
+			} 
+				// que el resultado de la busqueda de la posición de @ tanto por el principio y
 			// por el final sea el mismo y que la posición de la @ sea menor que la del
 			// punto.
-
 			if (email.indexOf("@") != email.lastIndexOf("@")) {
 				mensajeDeError += "- solo puede haber una @ .\n";
 				System.out.println(mensajeDeError);
-
-			} else {
-				// System.out.println("solo puede tener una @");
-			}
-			if (!email.contains("@")) {
+			} else if (!email.contains("@")) {
 				mensajeDeError += "- no hay ninguna @ .\n";
 				System.out.println(mensajeDeError);
-
 			}
-			// else {System.out.println("solo tiene una @2");}
 			// que la posicion de @ sea menor que la posicion del punto
 			int posicionArroba = email.lastIndexOf("@");
 			if (posicionArroba > posicionPunto) {
 				mensajeDeError += "- posicion de la arroba mal .\n";
 				System.out.println(mensajeDeError);
-
 			}
-			// else {System.out.println("tiene la @ bien");}
-
 			if (posicionPunto < posicionArroba + 2) {
 				mensajeDeError += "- no hay dos caracteres entre la arroba y el punto .\n";
 				System.out.println(mensajeDeError);
-
-			}
-			// else {System.out.println("caracteres mas de dos");}
+		}
 
 			// salimos mientras no haya mensajes de error
 		} while (!mensajeDeError.isEmpty());
