@@ -59,5 +59,6 @@ public class ArrayEjercicio {
 		for (int k = 0; k < tablero.length; k++) {
 			System.out.println("la posicion es " + k + "," + k + "; " + tablero[k][k]);
 		}
+	System.out.println(tablero.toString()); // solo sirve para unidimensionales así saca solo al posición de la memoria.  
 	}
 }

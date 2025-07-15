@@ -38,6 +38,7 @@ public class ArrayAlumnos {
 
 			switch (opcion) {
 			case 1: {
+				boolean hayHueco = false;
 				for (int i = 0; i < colegio.length; i++) {
 					for (int j = 0; j < colegio[i].length; j++) {
 						if (colegio[i][j] == null) {
@@ -51,6 +52,7 @@ public class ArrayAlumnos {
 								System.out.println("Campo vacio pasamos al siguente vacio");
 							} else {
 								colegio[i][j] = nombre;
+								hayHueco = true;
 								System.out.println("Has añadido a" + nombre + " | Aula: " + i + " | puesto" + j);
 
 							}
@@ -58,16 +60,21 @@ public class ArrayAlumnos {
 
 					}
 				}
+				if (!hayHueco) {
+					System.out.println("no hay huecos libre");
+				}
 			}
-
 				break;
 			case 2: {
+				/**
+				 * para recorrerlo con un foreach!!!! for (String [] aula : colegio) { // for
+				 * (String alumno : aula) { // CUIDADO ALUMNO YA NO ES UN ARRAY } }
+				 */
 				for (int i = 0; i < colegio.length; i++) {
 					for (int j = 0; j < colegio[i].length; j++) {
 						if (colegio[i][j] == null) {
-							System.out.println("\nNombre del Alumno: " + "vacio" + "\t" + "  | Aula: " + i
+							System.out.println("\nNombre del Alumno: " + "| vacio" + "\t" + "  | Aula: " + i
 									+ "\t | puesto" + j + "\n");
-
 						} else {
 							System.out.print("\nNombre del Alumno: " + "| " + colegio[i][j] + "\t" + " | Aula: " + i
 									+ "\t | puesto" + j + "\n");
@@ -82,10 +89,10 @@ public class ArrayAlumnos {
 				scan = new Scanner(System.in);
 				int contador = 0;
 				Boolean encontrado = false;
-
 				String texto = scan.nextLine();
 				for (int i = 0; i < colegio.length; i++) {
 					for (int j = 0; j < colegio[i].length; j++) {
+						// Muy IMPORTANTE !=null para que nunca entre en los vacios daria error!!!
 						if (colegio[i][j] != null && colegio[i][j].toLowerCase().contains(texto.toLowerCase())) {
 							contador++; // Incrementa el contador
 							System.out.println("\nAula: " + i + " | Puesto: " + j + " | Alumno: " + colegio[i][j]);
@@ -103,19 +110,16 @@ public class ArrayAlumnos {
 				scan = new Scanner(System.in);
 				String nombre = scan.nextLine();
 				boolean eliminado = false;
-
 				for (int i = 0; i < colegio.length; i++) {
 					for (int j = 0; j < colegio[i].length; j++) {
-
-						if (!nombre.trim().isEmpty() && colegio[i][j]!=null && colegio[i][j].equalsIgnoreCase(nombre) ) {
+							//para ahorrar y no poner !=null, nombre.equals(colegio[i][j])
+						if (!nombre.trim().isEmpty() && colegio[i][j] != null
+								&& colegio[i][j].equalsIgnoreCase(nombre)) {
 							colegio[i][j] = null;
 							System.out.println("Se ha borrado a " + "|" + nombre + " | Aula: " + i + " | puesto: " + j);
 							eliminado = true;
-
 						}
 						// usamos if !=elimininado para cerrar
-						
-
 					}
 				}
 				if (!eliminado) {
@@ -123,13 +127,14 @@ public class ArrayAlumnos {
 				}
 			}
 				break;
-
 			default:
-				System.out.println("Opción incorrecta");
+				if (opcion > 5) {
+					System.out.println("Opción incorrecta");
+				}
 				break;
 			}
-
 		} while (opcion != 5);
+		System.out.println("Saliste....");
 	}
 
 }
