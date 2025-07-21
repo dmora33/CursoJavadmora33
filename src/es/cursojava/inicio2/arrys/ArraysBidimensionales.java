@@ -23,11 +23,17 @@ public class ArraysBidimensionales {
 				// System.out.print(" \tcolumna: " + i);
 				System.out.print("posicion (" + i + "," + j + ")");
 				System.out.println("\t" + numeros[i][j]);
-				//System.out.print(numeros[i][j]+"\t");
+				// System.out.print(numeros[i][j]+"\t");
 			}
 		}
-		
-		
+
+		// declaramos el array bidimensional, con dos filas pero no iniciamos las
+		// columnas.
+		// import. siempre declarar las filas es obligatorio.
+		String colegio[][] = new String[2][];
+		// declaramos que en las filas 0 y 1 tenga distintas columnas.
+		colegio[0] = new String[4];
+		colegio[1] = new String[6];
 
 	}
 
