@@ -1,5 +1,7 @@
 package es.cursojava.metodos.ejercicios;
 
+import java.util.Arrays;
+
 public class CalculoRectangulo {
 
 	public static void main(String[] args) {
@@ -7,6 +9,7 @@ public class CalculoRectangulo {
 //int [] medidas= {2,6};
 
 		double[] valores = calculoRectangulo(2, 6);
+		System.out.println(Arrays.toString(valores) );
 	}
 
 	public static double[] calculoRectangulo(double base, double altura) {
