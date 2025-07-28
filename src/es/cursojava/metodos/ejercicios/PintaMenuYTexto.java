@@ -23,7 +23,7 @@ public class PintaMenuYTexto {
 		for (String opcion : opciones) {
 			System.out.print(opcion + "\n");
 		}
-		System.out.println("escoge una opción:");
+		System.out.println("Escoge una opción:");
 	}
 
 	public static void pintaMenu(String[] opciones, String texto) {

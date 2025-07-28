@@ -88,7 +88,6 @@ public class MenuDeLosCoj2 {
 
 		do {
 			PintaMenuYTexto.pintaMenu(opcionesMenu);
-			System.out.println("Escoge una opción");
 
 			opcion = scan.nextInt();
 
