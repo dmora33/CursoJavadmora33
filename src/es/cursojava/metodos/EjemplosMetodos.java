@@ -1,36 +1,89 @@
+
+
 package es.cursojava.metodos;
 
+import es.cursojava.inicio.arrays.Persona;
+import es.cursojava.utils.Utilidades;
+
+/**
+ * PARA QUE FUNCIONES HAY QUE UTILIZAR UTILS DEL PROYECTO PROF.
+ */
 public class EjemplosMetodos {
 
+	
 	public static void main(String[] args) {
-
-		System.out.println("empeiza");
+		
+		int edad = Utilidades.calcularEdad(2001);
+		System.out.println(edad);
+		
+		Metodos.saludar("Jose Luis");
+		
+		System.out.println("Empieza");
 		metodo1();
-		String name = "juan";
+		
+		String name = "Juan";
+		Metodos.saludar(name);
 		System.out.println(name);
 		metodo2(name);
 		System.out.println(name);
+		
+		
+		
+		Persona p = new Persona("Juan");
+		System.out.println(p.nombre);//Juan
+		metodo2(p);
+		System.out.println(p.nombre);//Juan
+		
+		System.out.println("Termina");
 
-		System.out.println("temina");
+		metodo4();
+		
 	}
 
-	// declaracion de metodo1
-	public static void metodo1() {
-		System.out.println("llamado método1");
+	public static void metodo1 () {
+		System.out.println("Llamado método1");
+		metodo2("");
 	}
-
-//par que guardar el nombre de maria en todo el programa.. necesito devolver el nombre de maira al string inicial
-	public static String metodo2(String nombre) {
-		System.out.println(nombre);
-		nombre = "maria";
-		System.out.println(nombre);
-		return nombre;
-
+	
+	/**
+	 * @param persona
+	 */
+	
+	private static void metodo2 (Persona persona) {
+		System.out.println(persona.nombre);//Juan
+		persona.nombre = "María";
+		System.out.println(persona.nombre);//Maria
+		
 	}
-
-	public static void metodo3(int numero) {
+	
+	/**
+	 * @param nombre
+	 */
+	private static void metodo2 (String nombre) {
+		System.out.println(nombre);//Juan
+		nombre = "María";
+		System.out.println(nombre);//Maria
+		
+		//return nombre;
+	}
+	
+	public static void metodo3 (int numero) {
 		System.out.println(numero);
 		numero = 7;
 		System.out.println(numero);
+		
 	}
+
+	private static double metodo4 () {
+		
+		return Math.random();
+	}
+	
+	
 }
+
+
+
+
+
+

@@ -4,25 +4,22 @@ public class TablaMultiplicar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("tabla de mútiplicar par el 5");
-		tablaMulti1Param(5);
-		System.out.println("tabla de múltipicar del 2 al 8");
-		tablaMulti2Param(2, 8);
+		pintaTablasMultiplicar(7, 9);
+
 	}
 
-	public static void tablaMulti1Param(int num) {
-		for (int i = num; i <= 10; i++) {
-			for (int j = 0; j <= 10; j++) {
-				System.out.println(i + "x" + j + "=" + (i * j));
-			}
-		}
-	}
-	public static void tablaMulti2Param (int num1, int num2) {
-		for (int i = num1; i <= num2; i++) {
-			for (int j = 0; j <= 10; j++) {
-				System.out.println(i + "x" + j + "=" + (i * j));
-			}
+	private static void pintaTablaMultiplicar(int numero) {
+		System.out.println("Tabla del " + numero);
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(i + " x " + numero + " = " + (i * numero));
 		}
 	}
 
+	private static void pintaTablasMultiplicar(int numero1, int numero2) {
+
+		for (int i = numero1; i <= numero2; i++) {
+			pintaTablaMultiplicar(i);
+		}
+
+	}
 }
