@@ -10,6 +10,8 @@ public class CalculoRectangulo {
 
 		//double[] valores = calculoRectangulo(2, 6);
 		//System.out.println(Arrays.toString(valores) );
+		
+		// utilizo el metodo dentro del foreach!!!!!!
 		for (double dato : calculoRectangulo(2,6)) {
 			System.out.println(dato);
 		}
