@@ -2,7 +2,7 @@
 
 package es.cursojava.metodos;
 
-import es.cursojava.inicio.arrays.Persona;
+import es.cursojava.oo.Persona;
 import es.cursojava.utils.Utilidades;
 
 /**
@@ -13,7 +13,7 @@ public class EjemplosMetodos {
 	
 	public static void main(String[] args) {
 		
-		int edad = Utilidades.calcularEdad(2001);
+		int edad = Utilidades.calculaEdad(2001);
 		System.out.println(edad);
 		
 		Metodos.saludar("Jose Luis");
@@ -28,11 +28,11 @@ public class EjemplosMetodos {
 		System.out.println(name);
 		
 		
-		
-		Persona p = new Persona("Juan");
-		System.out.println(p.nombre);//Juan
-		metodo2(p);
-		System.out.println(p.nombre);//Juan
+//		
+//		Persona p = new Persona("Juan");
+//		System.out.println(p.nombre);//Juan
+//		metodo2(p);
+//		System.out.println(p.nombre);//Juan
 		
 		System.out.println("Termina");
 

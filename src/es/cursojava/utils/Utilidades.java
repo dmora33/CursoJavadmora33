@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 //pasar un año y clacular la edad 
 public class Utilidades {
-	
-	public static void validarMail(String email) {
+		public static void validarMail(String email) {
 
 		String mensajeError = "";
 
@@ -82,6 +81,33 @@ public class Utilidades {
 		// System.out.println("Escoge una opción:");
 		
 		
+	}
+	
+	public static void anadirAlumn(String[][] colegio) {
+	//String nombre = Utilidades.pideDatoCadena("\nNombre del alumno:\n");
+		boolean hayHueco = false;
+		for (int i = 0; i < colegio.length; i++) {
+			for (int j = 0; j < colegio[i].length; j++) {
+				if (colegio[i][j] == null) {
+					System.out.println(" | Aula: " + i + " | puesto" + j);
+					String nombre = Utilidades.pideDatoCadena("\nNombre del alumno:\n");
+					// si pulsamos enter sin introducir datos y quitamos los espacios en blanco
+					// salto a otro espacio
+					if (nombre.trim().isEmpty()) {
+						System.out.println("Campo vacio pasamos al siguente vacio");
+					} else {
+						colegio[i][j] = nombre;
+						hayHueco = true;
+						System.out.println("Has añadido a" + nombre + " | Aula: " + i + " | puesto" + j);
+
+					}
+				}
+
+			}
+		}
+		if (!hayHueco) {
+			System.out.println("no hay huecos libre");
+		}
 	}
 
 	public static void pintaMenu(String[] opciones, String texto) {

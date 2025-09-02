@@ -42,34 +42,8 @@ public class MenuDeLosCoj2 {
 
 				break;
 
-			case 3: {
-				System.out.println("3. Añadir Alumno");
-				boolean hayHueco = false;
-				for (int i = 0; i < colegio.length; i++) {
-					for (int j = 0; j < colegio[i].length; j++) {
-						if (colegio[i][j] == null) {
-							scan = new Scanner(System.in);
-							System.out.println(" | Aula: " + i + " | puesto" + j);
-							System.out.println("Añadir nombre del Alumno:");
-							String nombre = scan.nextLine();
-							// si pulsamos enter sin introducir datos y quitamos los espacios en blanco
-							// salto a otro espacio
-							if (nombre.trim().isEmpty()) {
-								System.out.println("Campo vacio pasamos al siguente vacio");
-							} else {
-								colegio[i][j] = nombre;
-								hayHueco = true;
-								System.out.println("Has añadido a" + nombre + " | Aula: " + i + " | puesto" + j);
-
-							}
-						}
-
-					}
-				}
-				if (!hayHueco) {
-					System.out.println("no hay huecos libre");
-				}
-			}
+			case 3: 
+				Utilidades.anadirAlumn(colegio);
 				break;
 
 			case 4:
