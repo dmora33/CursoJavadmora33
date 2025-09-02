@@ -3,7 +3,7 @@ package es.cursojava.metodos.ejercicios;
 public class TablaMultiplicar {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 
 		pintaTablasMultiplicar(7, 9);
 
 	}

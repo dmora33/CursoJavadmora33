@@ -3,7 +3,7 @@ package es.cursojava.metodos.ejercicios;
 public class BuscaNomConLetras {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//
 		String[] nombres = { "adantiel", "marcos", "carlos", "leches", "amparito" };
 		buscaNomLetras(nombres);
 	}

@@ -30,10 +30,10 @@ public class Ejercicio4SwitchOpcDos {
 		}
 		scan.close();
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 
-	// TODO Auto-generated method stub
+	// 
 
 }

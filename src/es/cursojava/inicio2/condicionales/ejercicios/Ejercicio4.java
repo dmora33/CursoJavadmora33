@@ -34,7 +34,7 @@ public class Ejercicio4 {
 			System.out.println("TE HAS EQUIVOCADO");
 		}
 		scan.close();
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

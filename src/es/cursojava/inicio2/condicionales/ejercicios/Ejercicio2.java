@@ -17,7 +17,7 @@ public class Ejercicio2 {
 		}else if (nota ==10 ) {
 			System.out.println("El alumno " + nombreAlumno + "en la asignatura " + asignatura + "tiene un sobresaliente");
 		}else { System.out.println("La nota esta equivocada.");}
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

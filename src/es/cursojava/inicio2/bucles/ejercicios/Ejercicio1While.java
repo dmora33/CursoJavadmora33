@@ -8,7 +8,7 @@ public class Ejercicio1While {
 			num -= 2;
 			System.out.println(num);
 		}
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

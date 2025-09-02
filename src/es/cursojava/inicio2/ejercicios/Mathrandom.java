@@ -9,7 +9,7 @@ public class Mathrandom {
 		System.out.println(aleatorio);
 		
 		
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

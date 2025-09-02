@@ -8,7 +8,7 @@ public class Ejercicio2 {
 		}
 		
 		}
-		// TODO Auto-generated method stub
+		// 
 		
 	}
 

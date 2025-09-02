@@ -5,7 +5,7 @@ package es.cursojava.inicio2.string;
 public class StringEjercicio4PalabraMasLarga {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 
 		String frase = "Enasd un lugar de la Mancha de "
 				+ "cuyo nombre no puedo acordarme";
 		// como los marcadores de las palabras usamos el espacio

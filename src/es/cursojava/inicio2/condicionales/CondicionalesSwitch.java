@@ -37,7 +37,7 @@ public class CondicionalesSwitch {
 		}
 		System.out.println("Temina");
 		
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

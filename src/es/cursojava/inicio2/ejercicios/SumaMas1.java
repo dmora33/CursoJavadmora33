@@ -3,7 +3,7 @@ package es.cursojava.inicio2.ejercicios;
 public class SumaMas1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 
 		int num = 7;
 		System.out.println(num);
 		num = num + 1;

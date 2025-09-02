@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class CalculoRectangulo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 
 //int [] medidas= {2,6};
 
 		//double[] valores = calculoRectangulo(2, 6);

@@ -7,7 +7,7 @@ public class Ejercicio1 {
 			i++; // tambien podemos poner i+=2 en la condición
 			System.out.print(i + ",");
 		}
-		// TODO Auto-generated method stub
+		// 
 		
 	}
 

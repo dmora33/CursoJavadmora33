@@ -14,7 +14,7 @@ public class BucleWhile {
 			numero--;
 		}
 		System.out.println("termina");
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

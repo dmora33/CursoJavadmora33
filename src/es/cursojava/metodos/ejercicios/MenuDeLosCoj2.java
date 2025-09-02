@@ -17,7 +17,7 @@ public class MenuDeLosCoj2 {
 		colegio[0][1] = "Daniel";
 		colegio[1][2] = "Juan";
 
-		// TODO Auto-generated method stub
+		// 
 
 		String[] opcionesMenu = { "\nMenu", "1. Pintar Cuadro", "2. Validar email", "3. Añadir Alumno", "4. Salir" };
 		Scanner scan = new Scanner(System.in);

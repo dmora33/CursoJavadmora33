@@ -33,7 +33,7 @@ public class BucleForEjercicio8 {
 			i++;
 		}
 		System.out.println("El número de tenistas TOP 10 es: " + contador10);
-//		// TODO Auto-generated method stub
+//		// 
 		scan.close();
 		
 	}

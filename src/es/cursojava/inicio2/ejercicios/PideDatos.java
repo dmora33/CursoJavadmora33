@@ -51,7 +51,7 @@ public class PideDatos {
 																			// resto......numCalle%2==0 nos dice si es
 																			// par
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

@@ -14,7 +14,7 @@ public class ParImpar {
 			System.out.println("El " + numero + " es impar");
 		}
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

@@ -17,7 +17,7 @@ public class OperadorTernario {
 			
 			System.out.println(numero%2==0?"Par":"Impar");
 
-			// TODO Auto-generated method stub
+			// 
 
 		}
 

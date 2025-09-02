@@ -41,7 +41,7 @@ public class Ejercicio3 {
 		scan.close();
 	}
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

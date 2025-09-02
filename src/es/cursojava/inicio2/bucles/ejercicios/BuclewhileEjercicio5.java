@@ -19,7 +19,7 @@ public class BuclewhileEjercicio5 {
 		}
 		System.out.println("la media de las notas es:" + sumaNotas/numeroAlumnos);
 		scan.close();
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

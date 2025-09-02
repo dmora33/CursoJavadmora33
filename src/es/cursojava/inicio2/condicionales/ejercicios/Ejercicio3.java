@@ -50,7 +50,7 @@ public class Ejercicio3 {
 			System.out.println("el resultado de: " + accion + " es: " + valor);
 		} else {System.out.println("TE HAS EQUIVOCADO");}
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

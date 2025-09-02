@@ -27,7 +27,7 @@ public class CollatzEjercicio6DoWhile {
 		} while (numero != 1);
 		scan.close();
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

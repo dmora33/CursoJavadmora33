@@ -41,7 +41,7 @@ public class Ejercicio4Swich {
 		}
 		scan.close();
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

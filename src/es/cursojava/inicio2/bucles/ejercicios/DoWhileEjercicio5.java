@@ -27,7 +27,7 @@ public class DoWhileEjercicio5 {
 		System.out.println("la media es: "+ sumaNotas/numeroAlumnos);
 		scan.close();
 	}
-		// TODO Auto-generated method stub
+		// 
 
 
 

@@ -71,7 +71,7 @@ public class Ejercicio5 {
 			turno = "noche";
 		}
 
-		// TODO Auto-generated method stub
+		// 
 		System.out.println("turno: " + turno);
 		System.out.println("minutos llamada: " + minutosLlamada);
 		System.out.println("coste llamada sin impuestos: " + costeSinIva);

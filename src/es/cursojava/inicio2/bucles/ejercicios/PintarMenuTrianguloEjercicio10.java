@@ -101,7 +101,7 @@ public class PintarMenuTrianguloEjercicio10 {
 		}
 		scan.close();
 
-		// TODO Auto-generated method stub
+		// 
 
 	}
 

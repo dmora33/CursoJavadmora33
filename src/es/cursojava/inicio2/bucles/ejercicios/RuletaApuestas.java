@@ -266,7 +266,7 @@ public class RuletaApuestas {
 
 			}
 		} while (dinero >= 0);
-		// TODO Auto-generated method stub
+		// 
 
 	}
 }
