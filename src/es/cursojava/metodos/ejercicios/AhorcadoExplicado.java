@@ -44,7 +44,7 @@ public class AhorcadoExplicado {
 	public static void hangMan() {
 		// generar frase
 		String phrase = generateRandomPhrase();
-		//System.out.println("la frase es: " + phrase);
+		System.out.println("la frase es: " + phrase);
 		String letters = "";
 		String character = "";
 		// pedir nombre usuario
@@ -110,7 +110,7 @@ public class AhorcadoExplicado {
 	 * @param phrase La frase completa que se debe adivinar.
 	 * @param letters Las letras que el usuario ha adivinado hasta el momento.
 	 */
-	public static void printPhraseHangMan(String phrase, String letters) {
+public static void printPhraseHangMan(String phrase, String letters) {
 		for (int i = 0; i < phrase.length(); i++) {
 			if (letters.contains(String.valueOf(phrase.charAt(i)))) {
 				System.out.print(phrase.charAt(i));

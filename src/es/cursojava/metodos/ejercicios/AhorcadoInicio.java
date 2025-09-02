@@ -1,10 +1,11 @@
 package es.cursojava.metodos.ejercicios;
 
-public class MainAhorcado {
+public class AhorcadoInicio {
 
 	public static void main(String[] args) {
-Ahorcado.hangMan();
 
+		// hangMan(true) si quiero saber la frase.
+		Ahorcado.hangMan();
 
 	}
 

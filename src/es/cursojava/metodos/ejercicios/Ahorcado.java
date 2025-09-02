@@ -16,7 +16,7 @@ public class Ahorcado {
 	// sujeto + verbo + complemento
 	// get 12 phrases
 
-	// FIXME: Cambiar generateRandomPharse
+	// FIXME: Cambiar generateRandomPharse a privado
 	public static String generateRandomPhrase() {
 		return sujetos[(int) (Math.random() * 12)] + " " + verbos[(int) (Math.random() * 12)] + " "
 				+ complementos[(int) (Math.random() * 12)] + " ";
