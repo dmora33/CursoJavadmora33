@@ -49,12 +49,12 @@ public class EjemplosMetodos {
 	 * @param persona
 	 */
 	
-	private static void metodo2 (Persona persona) {
-		System.out.println(persona.nombre);//Juan
-		persona.nombre = "María";
-		System.out.println(persona.nombre);//Maria
-		
-	}
+//	private static void metodo2 (Persona persona) {
+//		System.out.println(persona.nombre);//Juan
+//		persona.nombre = "María";
+//		System.out.println(persona.nombre);//Maria
+//		
+//	}
 	
 	/**
 	 * @param nombre

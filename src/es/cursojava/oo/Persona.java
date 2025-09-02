@@ -2,7 +2,7 @@ package es.cursojava.oo;
 
 public class Persona {
 	// variables de instancia
-	public String nombre;
+	String nombre;
 	String apellidos;
 	int edad;
 	String dni;
