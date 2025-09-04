@@ -10,7 +10,7 @@ public class TestPersona {
 		// new genera el espacio en memoria y el constructor, Persona lo inicializa todo
 		// por defect.
 
-		// doy valores a los atributos
+		// doy valores a los atributos, 
 		persona1.nombre = "Raúl";
 		persona1.apellidos = "Pérez";
 		persona1.edad = 26;
