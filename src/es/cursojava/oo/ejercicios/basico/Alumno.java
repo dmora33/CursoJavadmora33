@@ -1,4 +1,4 @@
-package es.cursojava.oo;
+package es.cursojava.oo.ejercicios.basico;
 
 import java.util.Arrays;
 
@@ -14,7 +14,7 @@ public class Alumno {
 	
 	
 	public Alumno() {
-		
+		super();
 	}
 	public Alumno (String nombre, String dni) {
 		this.nombre = nombre;

@@ -1,4 +1,4 @@
-package es.cursojava.oo;
+package es.cursojava.oo.ejercicios.basico;
 
 public class Colegio {
 	

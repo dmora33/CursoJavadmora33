@@ -8,6 +8,13 @@ public class Persona {
 	int edad;
 	String dni;
 
+	// de esta manera hacemos un constructor que por defecto le paso el dni y crea
+	// todo por defecto menos el dni, que usa el que yo le doy.
+//	public Persona(String dni) {
+//		this.dni = dni;
+//	}
+	
+	//
 	// metodo de instancia, pertenece a cada objeto. NO STATIC!!
 	public void correr() {
 		System.out.print(nombre + " está corriendo");
@@ -16,6 +23,19 @@ public class Persona {
 		} else {
 			System.out.println(" despacio");
 		}
+	}
+
+	public Persona(String nombre, String apellidos, int edad, String dni) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+		this.edad = edad;
+		this.dni = dni;
+	}
+	
+
+	public Persona() {
+		super();
 	}
 
 	// METODOS GETTER Y SETTER
