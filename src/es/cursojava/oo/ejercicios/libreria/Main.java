@@ -13,11 +13,11 @@ public class Main {
 		Libro book3 = new Libro("libro3", "autor3", "loquesea3");
 		// importante si estoy creando un array de Libro[10] con sus atributos...
 		// declaro todo con [] y no con ().
-		//Libro[] books = new Libro[10];
+		// Libro[] books = new Libro[10];
 
 //creo obj libreria1 con sus caract.
-		
-		Library library1 = new Library("first", direccion1,10);
+
+		Library library1 = new Library("first", direccion1, 10);
 		library1.addBook(book1);
 		library1.addBook(book2);
 		library1.addBook(book3);
@@ -26,5 +26,5 @@ public class Main {
 
 		// llamo los metodos
 	}
-
+//FIXEME: ACABAR EJERC!!!!!!!
 }

@@ -6,17 +6,18 @@ public class Library {
 	private String name;
 	private Direccion address;
 	private Libro[] books;
-	private int limiteLibros; //añadimos un limite
+	private int limiteLibros; // añadimos un limite
 	private int contadorLibros;
 
 	public Library() {
 	}
+
 // añadimos al construc un limite para el array de libros,,, que es la capacidad
-	public Library(String name, Direccion address,int limiteLibros)  {
+	public Library(String name, Direccion address, int limiteLibros) {
 
 		this.name = name;
 		this.address = address;
-		this.books =new Libro[limiteLibros];
+		this.books = new Libro[limiteLibros];
 	}
 
 	public String getName() {
@@ -48,6 +49,7 @@ public class Library {
 	public void setBooks(Libro[] books) {
 		this.books = books;
 	}
+
 //public void addBook2(Libro books) {
 //	if (contadorLibros<books.length) {
 //		libro[contadorLibros++]=libro;
@@ -74,6 +76,7 @@ public class Library {
 
 	public void showInfLibrary() {
 		getAddress();
+
 		showBook();
 
 	}
