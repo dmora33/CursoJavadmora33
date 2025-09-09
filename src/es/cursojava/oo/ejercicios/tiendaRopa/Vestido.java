@@ -3,14 +3,45 @@ package es.cursojava.oo.ejercicios.tiendaRopa;
 public class Vestido {
 	private String color;
 	private double precio;
-	private double talla;
+	private String talla;
 
-	public Vestido(String color, double precio, double talla) {
+	public Vestido(String color, double precio, String talla) {
 		super();
 		this.color = color;
 		this.precio = precio;
 		this.talla = talla;
 	}
+	
+
+	public String getColor() {
+		return color;
+	}
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+	public double getPrecio() {
+		return precio;
+	}
+
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+
+	public String getTalla() {
+		return talla;
+	}
+
+
+	public void setTalla(String talla) {
+		this.talla = talla;
+	}
+
 
 	public void mostrarVestido() {
 		System.out.println("\ncolor:\t" + color + "\nprecio\t" + precio + "\ntalla\t" + talla);

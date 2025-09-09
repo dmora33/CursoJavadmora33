@@ -4,9 +4,58 @@ public class Pantalon {
 	private String color;
 	private double precio;
 	private String forma;
-	private double talla;
+	private String talla;
+	
 
-	public Pantalon(String color, double precio, String forma, double talla) {
+	public String getColor() {
+		return color;
+	}
+
+
+
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+
+
+
+	public String getForma() {
+		return forma;
+	}
+
+
+
+
+
+	public void setForma(String forma) {
+		this.forma = forma;
+	}
+
+
+
+
+
+	public String getTalla() {
+		return talla;
+	}
+
+
+
+
+
+	public void setTalla(String talla) {
+		this.talla = talla;
+	}
+
+
+
+
+
+	public Pantalon(String color, double precio, String forma, String talla) {
 		super();
 		this.color = color;
 		this.precio = precio;

@@ -7,12 +7,14 @@ import java.util.Arrays;
  * 
  */
 public class Camisa {
+	
+		
 	private String color;
 	private double precio;
-	private double talla;
+	private String talla;
 	private Boton[] boton;
 
-	public Camisa(String color, double precio, double talla, Boton[] boton) {
+	public Camisa(String color, double precio, String talla, Boton[] boton) {
 		super();
 		this.color = color;
 		this.precio = precio;
@@ -20,6 +22,36 @@ public class Camisa {
 		this.boton = boton;
 	}
 	
+
+	public String getColor() {
+		return color;
+	}
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+	public String getTalla() {
+		return talla;
+	}
+
+
+	public void setTalla(String talla) {
+		this.talla = talla;
+	}
+
+
+	public Boton[] getBoton() {
+		return boton;
+	}
+
+
+	public void setBoton(Boton[] boton) {
+		this.boton = boton;
+	}
+
 
 	public double getPrecio() {
 		return precio;
