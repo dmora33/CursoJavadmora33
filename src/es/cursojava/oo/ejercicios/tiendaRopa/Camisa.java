@@ -19,6 +19,17 @@ public class Camisa {
 		this.talla = talla;
 		this.boton = boton;
 	}
+	
+
+	public double getPrecio() {
+		return precio;
+	}
+
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
 
 	public void mostrarCamisa() {
 		System.out.println("\ncolor:\t" + this.color + "\nprecio:\t" + this.precio + "\ntalla:\t" + talla + "\nboton\t"
