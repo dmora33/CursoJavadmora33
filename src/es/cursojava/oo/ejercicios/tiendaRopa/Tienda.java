@@ -41,6 +41,7 @@ public class Tienda {
 
 	public void mostrarEscaparate(Maniqui[] maniquis) {
 		for (Maniqui maniqui : maniquis) {
+			System.out.println();
 			maniqui.mostrarManiqui();
 		}
 	}
@@ -48,12 +49,14 @@ public class Tienda {
 	public void vestirManiqui(Maniqui[] maniquis) {
 
 	}
+	// VAMOS HACER CERRAR!!!!
+	//FIXME COPIAR EL DEL PORFE Y COMENTARLO!!!!!
+	public void cerrar() {}
 
 	public static void main(String[] args) {
 
 		Tienda tienda = new Tienda("tienda1");
 		Maniqui[] ms = tienda.abrirTienda(); /// recuperamos el fuck array de maniquis que esta en un obj y lo añadimos
-												/// en un ms en la tienda.... joder...
-
+										/// en un ms en la tienda.... joder...
 	}
 }

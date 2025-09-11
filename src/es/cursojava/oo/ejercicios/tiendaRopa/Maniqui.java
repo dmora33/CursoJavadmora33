@@ -105,11 +105,11 @@ public class Maniqui {
 		if (getEstaVestido()==0) {
 			System.out.println("\nEl maniqui esta desvestido.");
 		}else if (getEstaVestido()==1) {
-			System.out.println("\nVestido:\t" + vestido);
+			System.out.println("\nVestido:\t" + getVestido());
 
 		}else {
-			System.out.println("\nCamisa\t" +  camisa);
-			System.out.println("\nPantalon\t" + pantalon);
+			System.out.println("\nCamisa\t" +  getCamisa());
+			System.out.println("\nPantalon\t" + getPantalon());
 			
 		}
 	
