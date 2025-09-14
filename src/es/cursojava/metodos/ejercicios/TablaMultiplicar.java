@@ -1,10 +1,18 @@
 package es.cursojava.metodos.ejercicios;
 
+import java.util.Scanner;
+
 public class TablaMultiplicar {
 
 	public static void main(String[] args) {
-		// 
-		pintaTablasMultiplicar(7, 9);
+		//
+		System.out.println("dime dos números");
+		Scanner scan = new Scanner(System.in);
+		int numeroUno = scan.nextInt();
+		System.out.println("dime el segu do numero");
+		int numeroDos = scan.nextInt();
+
+		pintaTablasMultiplicar(numeroUno, numeroDos);
 
 	}
 
