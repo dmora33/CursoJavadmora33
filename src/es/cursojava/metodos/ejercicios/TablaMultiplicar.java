@@ -13,7 +13,7 @@ public class TablaMultiplicar {
 		int numeroDos = scan.nextInt();
 
 		pintaTablasMultiplicar(numeroUno, numeroDos);
-
+		scan.close();
 	}
 
 	private static void pintaTablaMultiplicar(int numero) {

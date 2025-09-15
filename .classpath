@@ -6,5 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="es/cursojava/inicio/" kind="src" path="src"/>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="lib" path="lib/calculadora.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
