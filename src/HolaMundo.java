@@ -1,9 +1,16 @@
+import org.slf4j.LoggerFactory;
+
+import ch.qos.logback.classic.Logger;
 
 public class HolaMundo {
+				//	private	static final Logger log = LoggerFactory.getLogger(null);
+
 	/**
 	 * @param args "hola mundo loco", numero y edad;
 	 */
 	public static void main(String[] args) {
+
+
 
 		System.out.println("Hola mundo LOCOOO335!!!!");
 		System.out.println("Hola mundo LOCOOO33!");
