@@ -1,17 +1,17 @@
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import ch.qos.logback.classic.Logger;
-
 public class HolaMundo {
-				//	private	static final Logger log = LoggerFactory.getLogger(null);
+	// poner el nombre de la clase en el log
+
+	private static final Logger log = LoggerFactory.getLogger(HolaMundo.class);
 
 	/**
 	 * @param args "hola mundo loco", numero y edad;
 	 */
 	public static void main(String[] args) {
 
-
-
+		log.warn("Que pasa loco mundo");
 		System.out.println("Hola mundo LOCOOO335!!!!");
 		System.out.println("Hola mundo LOCOOO33!");
 
@@ -26,7 +26,7 @@ public class HolaMundo {
 		System.out.println("10" + numero + edad);
 		// el codigo entre parentesis se eje. antes;
 		System.out.println("resultado:" + " " + (numero + edad));
-				System.out.println("Hola mundo LOOO233!!!!");
+		System.out.println("Hola mundo LOOO233!!!!");
 
 	}
 
