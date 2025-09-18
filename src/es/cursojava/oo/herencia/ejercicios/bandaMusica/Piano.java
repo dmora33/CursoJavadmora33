@@ -34,5 +34,8 @@ public class Piano extends Instrumento {
 	public void setTipoPiano(String tipoPiano) {
 		this.tipoPiano = tipoPiano;
 	}
-
+public void afinar() {
+	super.afinar();
+	log.info(tipoPiano);
+}
 }

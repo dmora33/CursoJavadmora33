@@ -45,14 +45,33 @@ public class Instrumento {
 
 	// afinar() --> Afinando instrumento nombre, se afina o no de manera aleatoria
 	// Math.random()> 0.4 --> El instrumento está afinado
+	// modifico mierda de metodo para que afine hasta que el instrumento este
+	// afinado.
+	public void afinarTodosAfinados() {
+		double valor;
+		do {
+			valor = Math.random();
+
+			if (valor > 0.4) {
+				log.info("El instrumento esta afinado" + getNombre());
+				this.afinado = true;
+			} else {
+				log.info("El instrumento no esta afinado" + getNombre());
+				this.afinado = false;
+			}
+
+		} while (valor < 0.4);
+		setAfinado(true);
+	}
+
 	public void afinar() {
 		double valor = Math.random();
-		if (valor > 0.4) {
-			log.info("El instrumento esta afinado");
-			this.afinado = true;
-		} else {
+		if (valor < 0.4) {
 			log.info("El instrumento no esta afinado");
 			this.afinado = false;
+		} else {
+			log.info("El instrumento esta afinado");
+			this.afinado = true;
 		}
 
 	}
