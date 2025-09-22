@@ -1,3 +1,19 @@
 17:05:30.007 [main] INFO  HolaMundo - Que pasa loco mundo
 17:12:17.414 [main] WARN  HolaMundo - Que pasa loco mundo
 21:11:54.892 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.BandaMusica - Comienza el concierto!!
+16:10:13.592 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.BandaMusica - Comienza el concierto!!
+16:12:09.454 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.BandaMusica - Comienza el concierto!!
+16:15:52.386 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.BandaMusica - Comienza el concierto!!
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - El instrumento esta afinado
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Piano - de cola
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - El instrumento no esta afinado
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Guitarra - Afinando guitarra
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - El instrumento esta afinado
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Guitarra - Afinando guitarra
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - El instrumento no esta afinado
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Tambor - afinando
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - Tocando el instrumentopiano1
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - Tocando el instrumentoguitarra1
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Guitarra - Tocar muy alto
+16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - Tocando el instrumentotambor1
+16:15:52.390 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.BandaMusica - La banda suena mal por que esta dafinada
