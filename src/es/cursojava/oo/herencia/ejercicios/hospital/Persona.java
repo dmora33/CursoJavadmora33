@@ -3,11 +3,15 @@ package es.cursojava.oo.herencia.ejercicios.hospital;
 public class Persona {
 	private String nombre;
 	private int edad;
-	
-	//constructor
+
+	// constructor
 	public Persona(String nombre, int edad) {
 		this.nombre = nombre;
 		this.edad = edad;
+	}
+// constructor por defecto vacio
+	public Persona() {
+		super();
 	}
 
 	public String getNombre() {
@@ -30,9 +34,9 @@ public class Persona {
 	public String toString() {
 		return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
 	}
-	
+
 	public void comer() {
-		
+
 	}
 
 }
