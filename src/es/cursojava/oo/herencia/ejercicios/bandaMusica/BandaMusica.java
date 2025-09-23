@@ -10,7 +10,7 @@ public class BandaMusica {
 	private static final Logger log = LoggerFactory.getLogger(BandaMusica.class);
 
 	// constructor
-	public BandaMusica(Instrumento[] intrumentos) {
+	public BandaMusica(Instrumento[] instrumentos) {
 		this.instrumentos = instrumentos;
 	}
 
@@ -38,10 +38,10 @@ public class BandaMusica {
 		}
 	}
 
-	public void empezarConcierto() {
+	public void empezarConcierto(BandaMusica banda) {
 		log.info("Comienza el concierto!!");
-		afinarInstrumentos(instrumentos);
-		tocarInstrumentos(instrumentos);
+		afinarInstrumentos(banda.instrumentos);
+		tocarInstrumentos(banda.instrumentos);
 	}
 
 	public static void main(String[] args) {
@@ -53,6 +53,6 @@ public class BandaMusica {
 
 		BandaMusica bandaMusica = new BandaMusica(instrumentos);
 
-		bandaMusica.empezarConcierto();
+		bandaMusica.empezarConcierto(bandaMusica);
 	}
 }
