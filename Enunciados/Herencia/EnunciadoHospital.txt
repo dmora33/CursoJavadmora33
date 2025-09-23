@@ -1,4 +1,4 @@
-Clase Persona
+DClase Persona
 	+ nombre
 	+ edad
 	

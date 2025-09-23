@@ -35,7 +35,7 @@ public class Doctor extends EmpleadosHospital {
 			log.info("El paciente " + paciente.getNombre() + " esta enfermo");
 			enfermo.setNombre(paciente.getNombre());
 			enfermo.setEdad(paciente.getEdad());
-			enfermo.setEnfermedad(true);
+			enfermo.setEnfermedad("esta enfermo");
 
 		} else {
 			log.info("El paciente " + paciente.getNombre() + " no esta enfermo se marcha a casa");

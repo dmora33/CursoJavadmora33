@@ -4,13 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Enfermo extends Persona {
-	private boolean enfermedad;
+	private String enfermedad;
 	private static final Logger log = LoggerFactory.getLogger(Enfermo.class);
 
 	// Constructor por defecto vacío
-	
 
-	public Enfermo(String nombre, int edad, boolean enfermedad) {
+	public Enfermo(String nombre, int edad, String enfermedad) {
 		super(nombre, edad);
 		this.enfermedad = enfermedad;
 	}
@@ -19,11 +18,11 @@ public class Enfermo extends Persona {
 		super(nombre, edad);
 	}
 
-	public boolean getEnfermedad() {
+	public String getEnfermedad() {
 		return enfermedad;
 	}
 
-	public void setEnfermedad(boolean enfermedad) {
+	public void setEnfermedad(String enfermedad) {
 		this.enfermedad = enfermedad;
 	}
 
