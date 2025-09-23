@@ -10,9 +10,17 @@ public class BandaMusica {
 	private static final Logger log = LoggerFactory.getLogger(BandaMusica.class);
 
 	// constructor
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> branch 'main' of https://github.com/dmora33/CursoJavadmora33
 	public BandaMusica(Instrumento[] instrumentos) {
 		this.instrumentos = instrumentos;
 	}
+
+	
+	
 
 	public void afinarInstrumentos(Instrumento[] instrumentos) {
 
