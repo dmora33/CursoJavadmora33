@@ -1,4 +1,4 @@
-DClase Persona
+Clase Persona
 	+ nombre
 	+ edad
 	
@@ -49,15 +49,15 @@ Hospital
 		--> horaDeComer()
 		--> pasarConsultas()
 		
-	+ abrirHospital()
+	+ abrirHospital() ok devuelve personasHospital[]
 		+ 2 objetos de tipo habitación
 		+ 3 pacientes --> Meterlos en la sala de espera
 		+ 1 enfermero
 		+ 1 doctor
 		
-	+ ficharEmpleados ()
+	+ ficharEmpleados () ok
 		//Crear método que ponga a fichar a todos los empleados del hospital
-	+ horaDeComer()
+	+ horaDeComer() ok
 		//Crear método para poner a todas las personas del hospital a comer
 		
 	+ pasarConsultas()

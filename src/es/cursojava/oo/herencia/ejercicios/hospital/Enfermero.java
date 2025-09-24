@@ -1,7 +1,7 @@
 package es.cursojava.oo.herencia.ejercicios.hospital;
 
 public class Enfermero extends EmpleadosHospital {
-	
+
 	private int planta;
 
 	public Enfermero(String nombre, int edad, String turno, int planta) {
@@ -22,9 +22,10 @@ public class Enfermero extends EmpleadosHospital {
 		return "Enfermero [planta=" + planta + ", getTurno()=" + getTurno() + ", getNombre()=" + getNombre()
 				+ ", getEdad()=" + getEdad() + "]";
 	}
-	
-	public Paciente atenderPaciente (Paciente paciente) {
-		
-		return paciente;
-	}
+
+//	public Paciente  atenderPaciente (Paciente[] salaDeEspera) {
+//		
+//		for
+//		
+//	}
 }
