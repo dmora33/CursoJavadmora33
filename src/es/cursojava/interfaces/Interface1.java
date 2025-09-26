@@ -5,6 +5,8 @@ package es.cursojava.interfaces;
 
 //encontramos metodos abstracto (metodo vacio) , variables estaticas y finales aunque no lo especifiquemos
 
+//funcionaliedad para objetos que entre ellos no hay relación.
+
 public interface Interface1 extends Interface2, Interface3 {
 	int numero = 9;
 
@@ -13,4 +15,6 @@ public interface Interface1 extends Interface2, Interface3 {
 	public void metodo2(String nombre);
 
 	// aunq no hemos puesto static final lo es por estar en una interface!!!!
+	
+	
 }
