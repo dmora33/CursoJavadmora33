@@ -63,6 +63,7 @@ public class Hospital {
 		empleados[0] = enfermero1;
 		empleados[1] = doc1;
 
+		
 	}
 
 	public void ficharEmpleados(EmpleadosHospital[] empleados) {

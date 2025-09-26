@@ -1,6 +1,6 @@
 package es.cursojava.oo.herencia.ejercicios.hospital;
 
-public class Persona {
+public  class Persona {
 	private String nombre;
 	private int edad;
 
@@ -9,6 +9,7 @@ public class Persona {
 		this.nombre = nombre;
 		this.edad = edad;
 	}
+
 // constructor por defecto vacio
 	public Persona() {
 		super();
@@ -35,7 +36,7 @@ public class Persona {
 		return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
 	}
 
-	public void comer() {
+	public  void comer() {
 
 	}
 
