@@ -13,5 +13,7 @@ public class ClaseInterfaces implements Interface1 {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 	
 }

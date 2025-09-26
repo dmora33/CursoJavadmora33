@@ -5,7 +5,7 @@ package es.cursojava.interfaces;
 
 //encontramos metodos abstracto (metodo vacio) , variables estaticas y finales aunque no lo especifiquemos
 
-public interface Interface1 {
+public interface Interface1 extends Interface2, Interface3 {
 	int numero = 9;
 
 	public void metodo1();
