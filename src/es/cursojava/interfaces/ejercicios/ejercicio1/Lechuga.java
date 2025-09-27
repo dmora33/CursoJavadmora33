@@ -16,4 +16,10 @@ public class Lechuga extends Verdura {
 		this.tipo = tipo;
 	}
 
+	@Override
+	public void desinfectar() {
+		// TODO Auto-generated method stub
+		super.desinfectar();
+	}
+
 }

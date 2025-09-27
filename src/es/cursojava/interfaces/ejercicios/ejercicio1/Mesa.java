@@ -20,7 +20,13 @@ public class Mesa extends Mueble {
 	@Override
 	public void limpiar() {
 		// TODO Auto-generated method stub
-		
+
+	}
+
+	@Override
+	public void desinfectar() {
+		// TODO Auto-generated method stub
+
 	}
 
 }

@@ -23,4 +23,12 @@ public class Silla extends Mueble {
 		
 	}
 
+	@Override
+	public void desinfectar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
 }
