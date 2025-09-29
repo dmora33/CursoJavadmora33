@@ -2,7 +2,7 @@ package es.cursojava.interfaces.ejercicios.Pokemon;
 
 public class Main {
 
-	Pokemon squirtle = new Squirtle();
+	Squirtle squirtle = new Squirtle();
 	Charmander charmander = new Charmander();
 	Bulbasaur bulba = new Bulbasaur();
 	Pikachu pika = new Pikachu();

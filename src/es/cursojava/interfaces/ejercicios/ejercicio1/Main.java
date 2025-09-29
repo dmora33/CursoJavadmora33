@@ -7,12 +7,12 @@ public class Main {
 	private static final Logger log = LoggerFactory.getLogger(Main.class);
 
 	public static void main(String[] args) {
-		Mueble silla = new Silla("rojo", "tres");
-		Mueble mesa = new Mesa("maron", "rectanfular");
-		Verdura judiaVerde = new JudiasVerdes(null);
-		Verdura lechuga = new Lechuga(null);
-		
-	
+		Silla silla = new Silla("rojo", "tres");
+		Mesa mesa = new Mesa("maron", "rectanfular");
+		JudiasVerdes judiaVerde = new JudiasVerdes(null);
+		Lechuga lechuga = new Lechuga(null);
 
+		mesa.desinfectar();
+		mesa.limpiar();
 	}
 }
