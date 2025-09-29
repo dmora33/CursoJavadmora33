@@ -4,7 +4,7 @@ public class Instrumento {
 
     private String nombre;
 	private String tipo;
-	private boolean afinado;
+	private boolean afinado; //la variable afinado esta por defeto = false
 
     public Instrumento(String nombre, String tipo) {
         this.nombre = nombre;
@@ -43,9 +43,9 @@ public class Instrumento {
         sb.append(", afinado=").append(afinado);
         return sb.toString();
     }
-
+//la variable afinado esta por defeto = false
     public void afinar (){
-        this.afinado = Math.random()>0.4;
+        this.afinado = Math.random()>0.4; // si random es mayor que 0.4 aplica directamente al boolean, true
         if(afinado){
             System.out.println("El instrumento "+ nombre +" está afinado correctamente");
         }else{

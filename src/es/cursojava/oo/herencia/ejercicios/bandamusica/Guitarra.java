@@ -20,10 +20,10 @@ public class Guitarra extends Instrumento{
     public void setNumCuerdas(int numCuerdas) {
         this.numCuerdas = numCuerdas;
     }
-
+// hacemos sobreescribir toString para mostrar almacenar en sb los datos del instrumento Guitarra
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();//no crea un nuevo string, suma en el mismo objeto cadenas de string...
         sb.append("Guitarra{");
         sb.append(super.toString());
         sb.append("numCuerdas=").append(numCuerdas);
@@ -34,6 +34,7 @@ public class Guitarra extends Instrumento{
     @Override
     public void afinar() {
         super.afinar();
+        // alplio el metro de padre afinar
         System.out.println("Afinando la guitarra");
     }
 
