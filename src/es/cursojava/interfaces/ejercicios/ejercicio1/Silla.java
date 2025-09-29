@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.ejercicio1;
 
-public class Silla extends Mueble {
+public class Silla extends Mueble implements Limpieable {
 
 	String materia;
 
@@ -19,8 +19,7 @@ public class Silla extends Mueble {
 
 	@Override
 	public void limpiar() {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 }

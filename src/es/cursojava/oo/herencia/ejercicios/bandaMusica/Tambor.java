@@ -1,29 +1,41 @@
-package es.cursojava.oo.herencia.ejercicios.bandaMusica;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package es.cursojava.oo.herencia.ejercicios.bandamusica;
 
 public class Tambor extends Instrumento {
-	private String material;
-	private static final Logger log = LoggerFactory.getLogger(Tambor.class);
+    private String material;
 
-	public Tambor(String nombre, String tipo, boolean afinado) {
-		super(nombre, tipo, afinado);
-		// TODO Auto-generated constructor stub
-	}
+    public Tambor(String nombre, String tipo, String material) {
+        super(nombre, tipo);
+        this.material = material;
+    }
 
-	public Tambor(String nombre, String tipo, boolean afinado, String material) {
-		super(nombre, tipo, afinado);
-		this.material = material;
-	}
+    public String getMaterial() {
+        return material;
+    }
 
-	public void afinar() {
-		super.afinar();
-		log.info("afinando");
+    public void setMaterial(String material) {
+        this.material = material;
+    }
 
-	}
+    
+    public void aporrear() {
+        System.out.println("Aporreando el tambor de " + material);
+    }
 
-	public void aporrear() {
-		log.info("aprorreando Tambor");
-	}
+    @Override
+    public void afinar() {
+       this.setAfinado(true);
+       System.out.println("El tambor "+getNombre()+ " está afinado");
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Tambor{");
+        sb.append("material=").append(material);
+        sb.append('}');
+        return sb.toString();
+    }
+
+
+    
 }

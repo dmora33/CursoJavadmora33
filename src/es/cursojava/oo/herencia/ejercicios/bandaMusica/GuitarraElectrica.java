@@ -1,32 +1,38 @@
-package es.cursojava.oo.herencia.ejercicios.bandaMusica;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package es.cursojava.oo.herencia.ejercicios.bandamusica;
 
 public class GuitarraElectrica extends Guitarra {
-	private static final Logger log = LoggerFactory.getLogger(Guitarra.class);
-	private int potencia;
-
-	public GuitarraElectrica(String nombre, String tipo, boolean afinado) {
-		super(nombre, tipo, afinado);
-		// TODO Auto-generated constructor stub
-	}
-
-	public GuitarraElectrica(String nombre, String tipo, boolean afinado, int potencia) {
-		super(nombre, tipo, afinado);
+	private double potencia;
+	
+	public GuitarraElectrica(String nombre, String tipo, double potencia) {
+		super(nombre, tipo);
 		this.potencia = potencia;
-
 	}
 
-	public int getPotencia() {
+	public GuitarraElectrica(String nombre, String tipo) {
+		super(nombre, tipo);
+	}
+
+	public GuitarraElectrica(int numCuerdas, String nombre, String tipo) {
+		super(numCuerdas, nombre, tipo);
+	}
+
+	public double getPotencia() {
 		return potencia;
 	}
 
-	public void setPotencia(int potencia) {
+	public void setPotencia(double potencia) {
 		this.potencia = potencia;
 	}
 
-	public void tocar() {
-		log.info("Tocar muy alto");
+	@Override
+	public String toString() {
+		return "GuitarraElectrica [potencia=" + potencia + ", instrumento=" + super.toString() + "]";
 	}
+
+	@Override
+	public void tocar() {
+		System.out.println("Tocando la guitarra electrica "+ getNombre() +" muy alto");
+	}
+
+	
 }

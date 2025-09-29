@@ -1,19 +1,26 @@
 package es.cursojava.interfaces.ejercicios.ejercicio1;
 
-public class Lechuga extends Verdura {
+public class Lechuga extends Verdura implements Limpieable, Desinfectable{
+	
+	
+	public Lechuga(String procedencia) {
+		super(procedencia);
+	}
+
 	String tipo;
 
-	public Lechuga(String procedencia, String tipo) {
-		super(procedencia);
-		this.tipo = tipo;
+	@Override
+	public void limpiar() {
+		// TODO Auto-generated method stub
+		
 	}
 
-	public String getTipo() {
-		return tipo;
+	@Override
+	public void desinfectar() {
+		// TODO Auto-generated method stub
+		
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
+	
 
 }

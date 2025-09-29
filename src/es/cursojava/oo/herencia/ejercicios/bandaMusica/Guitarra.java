@@ -1,33 +1,47 @@
-package es.cursojava.oo.herencia.ejercicios.bandaMusica;
+package es.cursojava.oo.herencia.ejercicios.bandamusica;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+public class Guitarra extends Instrumento{
+    private int numCuerdas;
 
-public class Guitarra extends Instrumento {
-	private static final Logger log = LoggerFactory.getLogger(Guitarra.class);
-	private int numCuerdas;
+    public Guitarra(String nombre, String tipo) {
+        super(nombre, tipo);
+        this.numCuerdas = 6;
+    }
 
-	public Guitarra(String nombre, String tipo, boolean afinado) {
-		super(nombre, tipo, afinado);
-		// TODO Auto-generated constructor stub
-	}
+    public Guitarra(int numCuerdas, String nombre, String tipo) {
+        super(nombre, tipo);
+        this.numCuerdas = numCuerdas;
+    }
 
-	public Guitarra(String nombre, String tipo, boolean afinado, int numCuerdas) {
-		super(nombre, tipo, afinado);
-		this.numCuerdas = numCuerdas;
-	}
+    public int getNumCuerdas() {
+        return numCuerdas;
+    }
 
-	public int getNumCuerdas() {
-		return numCuerdas;
-	}
+    public void setNumCuerdas(int numCuerdas) {
+        this.numCuerdas = numCuerdas;
+    }
 
-	public void setNumCuerdas(int numCuerdas) {
-		this.numCuerdas = numCuerdas;
-	}
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Guitarra{");
+        sb.append(super.toString());
+        sb.append("numCuerdas=").append(numCuerdas);
+        sb.append('}');
+        return sb.toString();
+    }
 
-	public void afinar() {
-		super.afinar();
-		log.info("Afinando guitarra");
-	}
+    @Override
+    public void afinar() {
+        super.afinar();
+        System.out.println("Afinando la guitarra");
+    }
 
+    // @Override
+    // public void afinar (){
+    //     super.afinar();
+    //     System.out.println("Afinando la guitarra");
+    // }
+
+    
 }

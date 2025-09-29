@@ -1,66 +1,72 @@
-package es.cursojava.oo.herencia.ejercicios.bandaMusica;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package es.cursojava.oo.herencia.ejercicios.bandamusica;
 
 public class BandaMusica {
-//la banda de musica es un array de Instrumentos, solo tiene el atributo Instrumento[] instrumentos
+    private String nombre;
 
-	private Instrumento[] instrumentos;
-	private static final Logger log = LoggerFactory.getLogger(BandaMusica.class);
+    public BandaMusica(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public static void main(String[] args) {
+//    	Instrumento instrumento = new Tambor("Tambor de Don Nicanor","Membrana","");
+////    	Tambor t2 = new Tambor("Tambor de Don Nicanor2","Membrana","");
+//////    	t2.aporrear(); 
+////    	instrumento = t2;
+//    	Tambor t = (Tambor)instrumento;
+//    	t.aporrear();
+    	
+        BandaMusica banda = new BandaMusica("Filarmónica de Getafe");
+        banda.empezarConcierto();
+    }
 
-	// constructor
-<<<<<<< HEAD
-=======
-	
-	
->>>>>>> branch 'main' of https://github.com/dmora33/CursoJavadmora33
-	public BandaMusica(Instrumento[] instrumentos) {
-		this.instrumentos = instrumentos;
-	}
+    private void empezarConcierto(){
+        Instrumento[] instrumentos = crearInstrumentos();
+        afinar(instrumentos);
+        tocarConcierto(instrumentos);
+    }
 
-	
-	
+    private void tocarConcierto(Instrumento[] instrumentos){
+        System.out.println("\nEmpiezan a tocar");
+        for (Instrumento instrumento : instrumentos) {
+        	String clase = instrumento.getClass().getName();
+        	int ultimoPunto = clase.lastIndexOf(".");
+        	clase.substring(ultimoPunto+1);
+        	System.out.println(clase.substring(ultimoPunto+1));
+        	//if (clase.substring(ultimoPunto+1).equals("Tambor")) {
+        	if (instrumento instanceof Tambor) {	
+        	
+        		Tambor t = (Tambor)instrumento;
+        		t.aporrear();
+        	}
+//        	instrumento.tocar();
+//        	//instrumento.aporrear();
 
-	public void afinarInstrumentos(Instrumento[] instrumentos) {
+        }
+        System.out.println("El concierto ha terminado");
+    }
 
-		for (Instrumento instrumento : instrumentos) {
-			instrumento.afinar();
-		}
 
-	}
+    private void afinar(Instrumento[] instrumentos){
+        System.out.println("\nAfinando instrumentos");
+        for (Instrumento instrumento : instrumentos) {
+            instrumento.afinar();
+        }
+        System.out.println("Instrumentos afinados");
+    }
+    
+    private Instrumento[] crearInstrumentos (){
+        System.out.println("Creando instrumentos");
+        Guitarra bajo = new Guitarra(4,"Bajo","Cuerda");
+        Guitarra guitarra = new Guitarra("Guitarra1","Española");
+        GuitarraElectrica guitarraElectrica = new GuitarraElectrica("Electrica1", "Eléctrica");
+        Piano piano = new Piano(8,"Piano de cola", "Piano1", "Tipo2");
+        Tambor tambor = new Tambor("Tambor de Don Nicanor","Membrana","");
 
-	public void tocarInstrumentos(Instrumento[] instrumentos) {
-		boolean desafinado = false;
+        
+        Instrumento[] instrumentos = {bajo, guitarra, guitarraElectrica, piano, tambor};
 
-		for (Instrumento instrumento : instrumentos) {
-			if (!instrumento.isAfinado()) {
-				desafinado = true;
-			}
-			instrumento.tocar();
-		}
-		if (desafinado) {
-			log.info("La banda suena mal por que esta dafinada");
-		} else {
-			log.info("La banda suena armoniosa");
-		}
-	}
+        System.out.println("Instrumentos creados, total "+instrumentos.length);
+        return instrumentos;
+    }
 
-	public void empezarConcierto(BandaMusica banda) {
-		log.info("Comienza el concierto!!");
-		afinarInstrumentos(banda.instrumentos);
-		tocarInstrumentos(banda.instrumentos);
-	}
-
-	public static void main(String[] args) {
-		Piano piano = new Piano("piano1", "cuerda", false, 8, "de cola");
-		Guitarra guitarra = new Guitarra("guitarra1", "cuerda", true, 6);
-		GuitarraElectrica guitarraElectrica = new GuitarraElectrica("guitarra electrica 1", "cuerda", false, 6);
-		Tambor tambor = new Tambor("tambor1", "percusión", false, null);
-		Instrumento[] instrumentos = { piano, guitarra, guitarraElectrica, tambor };
-
-		BandaMusica bandaMusica = new BandaMusica(instrumentos);
-
-		bandaMusica.empezarConcierto(bandaMusica);
-	}
 }

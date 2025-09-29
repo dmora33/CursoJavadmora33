@@ -1,0 +1,7 @@
+package es.cursojava.interfaces.ejercicios.Pokemon;
+
+public interface Iagua {
+	public void atacarHidrobomba();
+    public void atacarBurbuja();
+    public void atacarPistolaAgua();
+}

@@ -1,41 +1,41 @@
-package es.cursojava.oo.herencia.ejercicios.bandaMusica;
+package es.cursojava.oo.herencia.ejercicios.bandamusica;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class Piano extends Instrumento {
-	private static final Logger log = LoggerFactory.getLogger(Piano.class);
+public class Piano extends Instrumento{
 	private int numeroOctavas;
 	private String tipoPiano;
 
-	public Piano(String nombre, String tipo, boolean afinado) {
-		super(nombre, tipo, afinado);
-		// TODO Auto-generated constructor stub
-	}
+    public Piano(int numeroOctavas, String tipoPiano, String nombre, String tipo) {
+        super(nombre, tipo);
+        this.numeroOctavas = numeroOctavas;
+        this.tipoPiano = tipoPiano;
+    }
 
-	public Piano(String nombre, String tipo, boolean afinado, int numeroOctavas, String tipoPiano) {
-		super(nombre, tipo, afinado);
-		this.numeroOctavas = numeroOctavas;
-		this.tipoPiano = tipoPiano;
-	}
+    public int getNumeroOctavas() {
+        return numeroOctavas;
+    }
 
-	public int getNumeroOctavas() {
-		return numeroOctavas;
-	}
+    public void setNumeroOctavas(int numeroOctavas) {
+        this.numeroOctavas = numeroOctavas;
+    }
 
-	public void setNumeroOctavas(int numeroOctavas) {
-		this.numeroOctavas = numeroOctavas;
-	}
+    public String getTipoPiano() {
+        return tipoPiano;
+    }
 
-	public String getTipoPiano() {
-		return tipoPiano;
-	}
+    public void setTipoPiano(String tipoPiano) {
+        this.tipoPiano = tipoPiano;
+    }
 
-	public void setTipoPiano(String tipoPiano) {
-		this.tipoPiano = tipoPiano;
-	}
-public void afinar() {
-	super.afinar();
-	log.info(tipoPiano);
-}
+    @Override
+    public String toString() {
+        return "Piano [numeroOctavas=" + numeroOctavas + ", tipoPiano=" + tipoPiano + ", " + super.toString()
+                + "]";
+    }
+
+    @Override
+    public void afinar() {
+        super.afinar();
+        System.out.println("Afinando el piano");
+    }    
 }
