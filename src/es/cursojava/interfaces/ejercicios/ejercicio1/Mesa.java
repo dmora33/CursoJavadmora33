@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.ejercicio1;
 
-public class Mesa extends Mueble {
+public class Mesa extends Mueble implements Desinfectable, Limpieable {
 
 	String forma;
 

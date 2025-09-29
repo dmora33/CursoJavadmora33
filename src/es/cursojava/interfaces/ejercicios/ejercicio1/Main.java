@@ -9,13 +9,10 @@ public class Main {
 	public static void main(String[] args) {
 		Mueble silla = new Silla("rojo", "tres");
 		Mueble mesa = new Mesa("maron", "rectanfular");
-		Verdura judiaVerde = new JudiasVerdes("España", "Blanda");
-		Verdura lechuga = new Lechuga("España", "Sin vaina");
+		Verdura judiaVerde = new JudiasVerdes(null);
+		Verdura lechuga = new Lechuga(null);
+		
+	
 
-		silla.limpiar();
-		mesa.desinfectar();
-		mesa.limpiar();
-		judiaVerde.desinfectar();
-		lechuga.desinfectar();
 	}
 }

@@ -1,19 +1,17 @@
 package es.cursojava.interfaces.ejercicios.ejercicio1;
 
-public class JudiasVerdes extends Verdura {
+public class JudiasVerdes extends Verdura implements Desinfectable{
+	public JudiasVerdes(String procedencia) {
+		super(procedencia);
+	}
+
 	String tipoVaina;
 
-	public JudiasVerdes(String procedencia, String tipoVaina) {
-		super(procedencia);
-		this.tipoVaina = tipoVaina;
+	@Override
+	public void desinfectar() {
+		
 	}
 
-	public String getTipoVaina() {
-		return tipoVaina;
-	}
-
-	public void setTipoVaina(String tipoVaina) {
-		this.tipoVaina = tipoVaina;
-	}
+	
 
 }
