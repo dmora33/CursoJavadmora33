@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.Pokemon;
 
-public class Charmander extends Pokemon implements IFuego {
+public class Charmander extends Pokemon implements Fuego {
 
 	public Charmander() {
 	}

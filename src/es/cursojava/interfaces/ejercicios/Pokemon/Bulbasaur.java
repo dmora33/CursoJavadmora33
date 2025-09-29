@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.Pokemon;
 
-public class Bulbasaur extends Pokemon implements IPlanta {
+public class Bulbasaur extends Pokemon implements Planta {
 	public Bulbasaur() {
 	}
 

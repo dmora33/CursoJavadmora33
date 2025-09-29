@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.Pokemon;
 
-public class Squirtle extends Pokemon implements Iagua {
+public class Squirtle extends Pokemon implements Agua {
 	public Squirtle() {
 	}
 

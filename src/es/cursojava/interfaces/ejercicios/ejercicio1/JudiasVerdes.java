@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.ejercicio1;
 
-public class JudiasVerdes extends Verdura implements Desinfectable{
+public class JudiasVerdes extends Verdura {
 	public JudiasVerdes(String procedencia) {
 		super(procedencia);
 	}
@@ -8,10 +8,13 @@ public class JudiasVerdes extends Verdura implements Desinfectable{
 	String tipoVaina;
 
 	@Override
-	public void desinfectar() {
+	public void limpiar() {
+		// TODO Auto-generated method stub
 		
 	}
 
+
+	
 	
 
 }

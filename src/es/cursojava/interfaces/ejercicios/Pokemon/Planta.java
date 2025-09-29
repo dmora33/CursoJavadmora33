@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.Pokemon;
 
-public interface IPlanta {
+public interface Planta {
 	  public void atacarDrenaje();
 	    public void atacarParalizar();
 }

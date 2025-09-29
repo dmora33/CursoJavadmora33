@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.Pokemon;
 
-public interface IFuego {
+public interface Fuego {
 
     public void atacarPunioFuego();
     public void atacarLanzallamas();

@@ -1,6 +1,6 @@
 package es.cursojava.interfaces.ejercicios.Pokemon;
 
-public class Pikachu extends Pokemon implements IElectrico {
+public class Pikachu extends Pokemon implements Electrico {
 	public Pikachu() {
 	}
 

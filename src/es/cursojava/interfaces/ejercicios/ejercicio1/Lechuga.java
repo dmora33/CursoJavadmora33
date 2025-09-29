@@ -1,8 +1,11 @@
 package es.cursojava.interfaces.ejercicios.ejercicio1;
 
-public class Lechuga extends Verdura implements Limpieable, Desinfectable{
-	
-	
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class Lechuga extends Verdura implements Desinfectable {
+	private static final Logger log = LoggerFactory.getLogger(Lechuga.class);
+
 	public Lechuga(String procedencia) {
 		super(procedencia);
 	}
@@ -11,16 +14,13 @@ public class Lechuga extends Verdura implements Limpieable, Desinfectable{
 
 	@Override
 	public void limpiar() {
-		// TODO Auto-generated method stub
-		
+		log.info("Limpiando ");
 	}
 
 	@Override
 	public void desinfectar() {
 		// TODO Auto-generated method stub
-		
-	}
 
-	
+	}
 
 }
