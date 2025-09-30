@@ -1,8 +1,15 @@
 package es.cursojava.interfaces.ejercicios.Pokemon;
 
 public class Squirtle extends Pokemon implements Agua {
-	public Squirtle() {
-	}
+		String tipo="agua";
+	
+	
+
+	public String getTipo() {
+			return tipo;
+		}
+
+
 
 	@Override
 	protected void atacarPlacaje() {
