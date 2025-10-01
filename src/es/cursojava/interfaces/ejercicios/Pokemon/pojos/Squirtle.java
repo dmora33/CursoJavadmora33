@@ -1,28 +1,25 @@
-package es.cursojava.interfaces.ejercicios.Pokemon;
+package es.cursojava.interfaces.ejercicios.Pokemon.pojos;
+
+import es.cursojava.interfaces.ejercicios.Pokemon.Interfaces.Agua;
 
 public class Squirtle extends Pokemon implements Agua {
-		String tipo="agua";
-	
-	
 
-	public String getTipo() {
-			return tipo;
-		}
-
-
+	public Squirtle() {
+		super();
+	}
 
 	@Override
-	protected void atacarPlacaje() {
+	public void atacarPlacaje() {
 		System.out.println("Hola soy Squirtle y este es mi ataque placaje");
 	}
 
 	@Override
-	protected void atacarAraniazo() {
+	public void atacarAraniazo() {
 		System.out.println("Hola soy Squirtle y este es mi ataque arañazo");
 	}
 
 	@Override
-	protected void atacarMordisco() {
+	public void atacarMordisco() {
 		System.out.println("Hola soy Squirtle y este es mi ataque mordisco");
 	}
 

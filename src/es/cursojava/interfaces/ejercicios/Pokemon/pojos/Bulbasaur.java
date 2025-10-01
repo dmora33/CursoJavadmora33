@@ -1,7 +1,12 @@
-package es.cursojava.interfaces.ejercicios.Pokemon;
+package es.cursojava.interfaces.ejercicios.Pokemon.pojos;
+
+import es.cursojava.interfaces.ejercicios.Pokemon.Interfaces.Planta;
 
 public class Bulbasaur extends Pokemon implements Planta {
+	
+
 	public Bulbasaur() {
+		super();
 	}
 
 	@Override

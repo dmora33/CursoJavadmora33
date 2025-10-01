@@ -1,22 +1,26 @@
-package es.cursojava.interfaces.ejercicios.Pokemon;
+package es.cursojava.interfaces.ejercicios.Pokemon.pojos;
+
+import es.cursojava.interfaces.ejercicios.Pokemon.Interfaces.Fuego;
 
 public class Charmander extends Pokemon implements Fuego {
 
 	public Charmander() {
+		super();
+
 	}
 
 	@Override
-	protected void atacarPlacaje() {
+	public void atacarPlacaje() {
 		System.out.println("Hola soy Charmander y este es mi ataque placaje");
 	}
 
 	@Override
-	protected void atacarAraniazo() {
+	public void atacarAraniazo() {
 		System.out.println("Hola soy Charmander y este es mi ataque arañazo");
 	}
 
 	@Override
-	protected void atacarMordisco() {
+	public void atacarMordisco() {
 		System.out.println("Hola soy Charmander y este es mi ataque mordisco");
 	}
 

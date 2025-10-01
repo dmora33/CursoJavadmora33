@@ -1,4 +1,4 @@
-package es.cursojava.interfaces.ejercicios.Pokemon;
+package es.cursojava.interfaces.ejercicios.Pokemon.Interfaces;
 
 public interface Agua {
 	public void atacarHidrobomba();
