@@ -1,4 +1,6 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.pojos;
+
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Utils.IdGenerator;
 
 public abstract class Producto extends IdGenerator {
 	private long id;

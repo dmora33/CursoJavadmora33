@@ -1,4 +1,7 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.pojos;
+
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Apagable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Encendible;
 
 public abstract class VehiculosMotorizado extends Vehiculo implements Apagable, Encendible {
 	

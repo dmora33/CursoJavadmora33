@@ -1,4 +1,4 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.pojos;
 
 public class Triciclo extends Bicicleta {
 

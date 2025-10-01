@@ -1,5 +1,13 @@
 package es.cursojava.interfaces.ejercicios.ApagarEncender;
 
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Apagable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Encendible;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Utils.MetodosEstaticos;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.pojos.Frigorifico;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.pojos.HarleyDavidson;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.pojos.Micro;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.pojos.Ramen;
+
 public class Main {
 	public void encendible(Encendible enciende) {
 		enciende.encender();

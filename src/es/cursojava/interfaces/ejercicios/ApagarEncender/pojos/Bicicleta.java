@@ -1,4 +1,4 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.pojos;
 
 public abstract class Bicicleta extends Vehiculo {
 

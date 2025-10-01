@@ -1,4 +1,6 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.pojos;
+
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Consultable;
 
 public class Ramen extends Alimentos implements Consultable {
 

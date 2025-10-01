@@ -1,4 +1,7 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.pojos;
+
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Consultable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Deletable;
 
 public class HarleyDavidson extends VehiculosMotorizado implements Consultable, Deletable {
 

@@ -1,4 +1,9 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.Utils;
+
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Consultable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Deletable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Insertable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Updatable;
 
 public class MetodosEstaticos {
 

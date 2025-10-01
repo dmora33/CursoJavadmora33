@@ -1,4 +1,8 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.pojos;
+
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Consultable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Insertable;
+import es.cursojava.interfaces.ejercicios.ApagarEncender.Interfaces.Updatable;
 
 public class Micro extends ProductosElectronicos implements Consultable,Insertable,Updatable {
 

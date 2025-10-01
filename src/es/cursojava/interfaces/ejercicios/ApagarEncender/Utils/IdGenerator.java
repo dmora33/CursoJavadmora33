@@ -1,4 +1,4 @@
-package es.cursojava.interfaces.ejercicios.ApagarEncender;
+package es.cursojava.interfaces.ejercicios.ApagarEncender.Utils;
 // creamos un generador de id unico!!!!!!
 public class IdGenerator {
 
