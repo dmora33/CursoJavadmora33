@@ -17,4 +17,10 @@ public abstract class Alimentos extends Producto {
 		this.fechaCaducidad = fechaCaducidad;
 	}
 
+	@Override
+	public String toString() {
+		return "Alimentos [fechaCaducidad=" + fechaCaducidad + ", getNombre()=" + getNombre() + ", getPrecio()="
+				+ getPrecio() + ", getClass()=" + getClass() + "]";
+	}
+
 }

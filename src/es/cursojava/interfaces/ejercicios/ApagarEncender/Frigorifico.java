@@ -1,8 +1,6 @@
 package es.cursojava.interfaces.ejercicios.ApagarEncender;
 
-public class Frigorifico extends ProductosElectronicos {
-
-	
+public class Frigorifico extends ProductosElectronicos implements Consultable, Insertable, Updatable {
 
 	public Frigorifico(String nombre, int precio, String fechaFabricacion) {
 		super(nombre, precio, fechaFabricacion);
@@ -19,6 +17,24 @@ public class Frigorifico extends ProductosElectronicos {
 	public void encender() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void insert() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void select() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

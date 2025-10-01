@@ -10,7 +10,6 @@ public abstract class Producto extends IdGenerator {
 		this.precio = precio;
 		this.id = IdGenerator.getNextId();
 	}
-	
 
 	public String getNombre() {
 		return nombre;
@@ -22,6 +21,10 @@ public abstract class Producto extends IdGenerator {
 
 	public void setPrecio(int precio) {
 		this.precio = precio;
+	}
+
+	public long getId() {
+		return id;
 	}
 
 }
