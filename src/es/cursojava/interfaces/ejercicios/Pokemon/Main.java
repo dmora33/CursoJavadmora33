@@ -7,8 +7,8 @@ public class Main {
 	Bulbasaur bulba = new Bulbasaur();
 	Pikachu pika = new Pikachu();
 
-//    squirtle.atacarAraniazo();
-//    squirtle.atacarHidrobomba();
+  // squirtle.atacarAraniazo();
+  // squirtle.atacarHidrobomba();
 //    charmander.atacarAraniazo();
 //    charmander.atacarLanzallamas();
 //    bulba.atacarAraniazo();
