@@ -1,6 +1,7 @@
 package es.cursojava.oo.herencia;
 
-public class Lobo extends Animal {
+public final class Lobo extends Animal {
+	// final es para que no se pueda heredar de ella.
 
 	private int numColmillos;
 	// para que no de error hay que añadir el constructor DE LA SUPER CLASE
