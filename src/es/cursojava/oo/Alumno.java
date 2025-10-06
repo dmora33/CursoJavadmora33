@@ -10,22 +10,29 @@ public class Alumno {
 	private String dni;
 	private double notaMedia;
 	private String[] asignaturas;
-	
-	
-	
+
 	public Alumno() {
-		
+
 	}
-	public Alumno (String nombre, String dni) {
+
+	public Alumno(String nombre, String dni) {
 		this.nombre = nombre;
-		this.dni=dni;
+		this.dni = dni;
 	}
-	public Alumno (String nombre, String dni, int edad, double notaMedia, String[] asignaturas) {
-		this.nombre=nombre;
-		this.dni=dni;
-		this.notaMedia=notaMedia;
-		this.asignaturas=asignaturas;
-		}
+
+	public Alumno(String nombre, String dni, int edad, double notaMedia, String[] asignaturas) {
+		this.nombre = nombre;
+		this.dni = dni;
+		this.notaMedia = notaMedia;
+		this.asignaturas = asignaturas;
+	}
+
+	public Alumno(String nombre, String dni, double notaMedia) {
+		super();
+		this.nombre = nombre;
+		this.dni = dni;
+		this.notaMedia = notaMedia;
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -63,7 +70,6 @@ public class Alumno {
 		System.out.println("el estudiante: " + this.nombre + "\nque tiene las asignaturas:"
 				+ Arrays.toString(asignaturas) + "\n" + comentario);
 	}
-	
 
 	public void estudiar() {
 		if (notaMedia < 5) {
@@ -74,7 +80,5 @@ public class Alumno {
 			datosAlumno("es un genio");
 		}
 	}
-
-	
 
 }
