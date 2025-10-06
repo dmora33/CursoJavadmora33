@@ -71,6 +71,12 @@ public class Alumno {
 				+ Arrays.toString(asignaturas) + "\n" + comentario);
 	}
 
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", dni=" + dni + ", notaMedia=" + notaMedia + ", asignaturas="
+				+ Arrays.toString(asignaturas) + "]";
+	}
+
 	public void estudiar() {
 		if (notaMedia < 5) {
 			datosAlumno("ha estudiado poco");
