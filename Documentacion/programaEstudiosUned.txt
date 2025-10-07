@@ -1,0 +1,25 @@
+| Día       | Asignaturas                                                        | Horas |
+| --------- | ------------------------------------------------------------------ | ----- |
+| Lunes     | Bases de datos (2h), Inglés técnico (1h)                           | 3     |
+| Martes    | Entorno cliente (1.5h), Programación (1.5h)                        | 3     |
+| Miércoles | Servidores (2h), Python (1h)                                       | 3     |
+| Jueves    | Bases de datos (1.5h), Entorno cliente (1.5h)                      | 3     |
+| Viernes   | Servidores (1.5h), Programación (1.5h)                             | 3     |
+| Sábado    | Repaso general + ejercicios prácticos (rotar materias cada semana) | 3     |
+| Domingo   | Descanso total 💤                                                  | —     |
+
+
+hasta diciembre
+
+| Día       | Asignaturas                        | Horas |
+| --------- | ---------------------------------- | ----- |
+| Lunes     | Proyecto cliente/servidor (3h)     |       |
+| Martes    | Bases de datos (2h), Inglés (1h)   |       |
+| Miércoles | Programación (1.5h), Python (1.5h) |       |
+| Jueves    | Servidores (2h), Cliente (1h)      |       |
+| Viernes   | Proyecto integrador (3h)           |       |
+| Sábado    | Repaso + prácticas tipo examen     |       |
+| Domingo   | Descanso                           |       |
+
+
+hasta marzo

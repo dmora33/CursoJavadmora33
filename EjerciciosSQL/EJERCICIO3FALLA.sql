@@ -7,7 +7,7 @@ stock NUMBER(5) DEFAULT 0, --DEFAULT 0
 fecha_alta_catalogo TIMESTAMP DEFAULT SYSTIMESTAMP,
 estado_publicacion VARCHAR2(10) DEFAULT 'ACTIVO', --CREAR CK PARA QUE SEA ACTIVO O INACTIVO
 sku VARCHAR2(10) NOT NULL UNIQUE,
-usuario_crea_registro VARCHAR2(20) NOT NULL,
+usuario_crea_registro VARCHAR2(20) NOT NULL DEFAULT USER,
 iva NUMBER(3) DEFAULT 21,
 --Restricciones
 CONSTRAINT pk_dani PRIMARY KEY (id),
@@ -110,7 +110,7 @@ WHERE stock = 0;
 
 --Incrementa el precio un 5% a los productos de TECNOLOGIA. precio * 1.05
 UPDATE dani
-SET precio_euros = precio_euros*1.05
+SET precio_euros = ROUND(precio_euros*1.05,2) -- ROUND redondea a dos decimales
 WHERE categoria_negocio = 'TECNOLOGIA';
 
 --Normaliza todas las fechas de alta al primer día del mes. 
