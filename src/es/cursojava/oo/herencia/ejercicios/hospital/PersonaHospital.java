@@ -1,17 +1,17 @@
 package es.cursojava.oo.herencia.ejercicios.hospital;
 
-public  class Persona {
+public  class PersonaHospital {
 	private String nombre;
 	private int edad;
 
 	// constructor
-	public Persona(String nombre, int edad) {
+	public PersonaHospital(String nombre, int edad) {
 		this.nombre = nombre;
 		this.edad = edad;
 	}
 
 // constructor por defecto vacio
-	public Persona() {
+	public PersonaHospital() {
 		super();
 	}
 

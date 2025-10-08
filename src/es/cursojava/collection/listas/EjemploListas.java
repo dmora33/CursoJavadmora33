@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import es.cursojava.oo.Persona;
+import es.cursojava.oo.PersonaOO;
 
 public class EjemploListas {
 
@@ -12,16 +12,16 @@ public class EjemploListas {
 
 // creo un obj de tipo ArrayList y añado con nombreObjeto.add(lo que quieres añadir)
 		// metemos solo obj de clase persona.
-		List<Persona> list = new ArrayList();
+		List<PersonaOO> list = new ArrayList();
 
 //		list.add("Amarillo");
 //		list.add(100.5);
 		
 		
-		list.add(new Persona());
+		list.add(new PersonaOO());
 		for (int i = 0; i < 10000; i++) {
 			//añadimos boolean para saber si hace bien el cambio
-			boolean aniadido = list.add(new Persona()); // añadimos 10000 objPersona a la lista
+			boolean aniadido = list.add(new PersonaOO()); // añadimos 10000 objPersona a la lista
 			System.out.println(aniadido); // verdaderp o falso is añade
 		}
 // si fuera de tipo object,,, generico,, tendriamos que 
@@ -39,16 +39,16 @@ public class EjemploListas {
 		List list3 = new ArrayList();
 		list3.add("Amarillo");
 		list3.add(100.5);
-		list3.add(new Persona());
+		list3.add(new PersonaOO());
 		
-		List<Persona> lista2 = new LinkedList<Persona>();
+		List<PersonaOO> lista2 = new LinkedList<PersonaOO>();
 
-		lista2.add(new Persona("Diela1", "Crespo ora", 0, "90098k"));
-		lista2.add(new Persona("Daela2", "Cespo Mora", 0, "90098jk"));
-		lista2.add(new Persona("Danla3", "Crespo Mora", 0, "9098jk"));
-		lista2.add(new Persona("Danie4l", "Cre¡po Mora", 0, "0098jk"));
-		lista2.add(new Persona("Danila5", "CrespoMora", 0, "998jk"));
-		lista2.add(new Persona("niela6", "Crspo Mora", 0, "90098j"));
+		lista2.add(new PersonaOO("Diela1", "Crespo ora", 0, "90098k"));
+		lista2.add(new PersonaOO("Daela2", "Cespo Mora", 0, "90098jk"));
+		lista2.add(new PersonaOO("Danla3", "Crespo Mora", 0, "9098jk"));
+		lista2.add(new PersonaOO("Danie4l", "Cre¡po Mora", 0, "0098jk"));
+		lista2.add(new PersonaOO("Danila5", "CrespoMora", 0, "998jk"));
+		lista2.add(new PersonaOO("niela6", "Crspo Mora", 0, "90098j"));
 
 		// remover en ArrayList 
 		// si es un obj no lo borra y nos lo da por si queremos salvarlo en otra list
@@ -61,7 +61,7 @@ public class EjemploListas {
 
 				String nombreBorrar = "daela2";
 
-				for (Persona persona : lista2) {
+				for (PersonaOO persona : lista2) {
 					if (persona.getNombre().equals(nombreBorrar)) {
 						lista2.remove(persona);
 						break;

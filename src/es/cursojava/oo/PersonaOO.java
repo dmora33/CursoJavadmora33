@@ -1,6 +1,6 @@
 package es.cursojava.oo;
 
-public class Persona {
+public class PersonaOO {
 	// variables de instancia HAY Q PONERLAS EN PRIVATE!!!!! AQUI NO PARA QUE NO DE
 	// ERRORES
 	String nombre;
@@ -13,7 +13,7 @@ public class Persona {
 //	public Persona(String dni) {
 //		this.dni = dni;
 //	}
-	
+
 	//
 	// metodo de instancia, pertenece a cada objeto. NO STATIC!!
 	public void correr() {
@@ -25,17 +25,26 @@ public class Persona {
 		}
 	}
 
-	public Persona(String nombre, String apellidos, int edad, String dni) {
+	public PersonaOO(String nombre, String apellidos, int edad, String dni) {
 		super();
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.edad = edad;
 		this.dni = dni;
 	}
-	
 
-	public Persona() {
+	public PersonaOO(String string) {
 		super();
+	}
+
+	public PersonaOO(String nombre, int edad) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	public PersonaOO() {
+		// TODO Auto-generated constructor stub
 	}
 
 	// METODOS GETTER Y SETTER

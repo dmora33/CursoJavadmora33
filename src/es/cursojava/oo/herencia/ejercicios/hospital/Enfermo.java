@@ -3,7 +3,7 @@ package es.cursojava.oo.herencia.ejercicios.hospital;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Enfermo extends Persona {
+public class Enfermo extends PersonaHospital {
 	private String enfermedad;
 	private static final Logger log = LoggerFactory.getLogger(Enfermo.class);
 

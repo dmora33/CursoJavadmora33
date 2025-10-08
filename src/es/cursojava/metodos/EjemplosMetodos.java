@@ -2,7 +2,7 @@
 
 package es.cursojava.metodos;
 
-import es.cursojava.oo.Persona;
+import es.cursojava.oo.PersonaOO;
 import es.cursojava.utils.Utilidades;
 
 /**

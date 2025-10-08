@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import ch.qos.logback.core.read.ListAppender;
-import es.cursojava.oo.Persona;
+import es.cursojava.oo.PersonaOO;
 
 public class ArrazListTeoria {
 
@@ -13,29 +13,29 @@ public class ArrazListTeoria {
 
 		// declarar sin inicializar:
 
-		List<Persona> lista = new ArrayList<Persona>();
+		List<PersonaOO> lista = new ArrayList<PersonaOO>();
 
-		lista.add(new Persona("Diela", "Crespo ora", 0, "90098k"));
-		lista.add(new Persona("Daela", "Cespo Mora", 0, "90098jk"));
-		lista.add(new Persona("Danla", "Crespo Mora", 0, "9098jk"));
-		lista.add(new Persona("Daniel", "Cre¡po Mora", 0, "0098jk"));
-		lista.add(new Persona("Danila", "CrespoMora", 0, "998jk"));
-		lista.add(new Persona("niela", "Crspo Mora", 0, "90098j"));
+		lista.add(new PersonaOO("Diela", "Crespo ora", 0, "90098k"));
+		lista.add(new PersonaOO("Daela", "Cespo Mora", 0, "90098jk"));
+		lista.add(new PersonaOO("Danla", "Crespo Mora", 0, "9098jk"));
+		lista.add(new PersonaOO("Daniel", "Cre¡po Mora", 0, "0098jk"));
+		lista.add(new PersonaOO("Danila", "CrespoMora", 0, "998jk"));
+		lista.add(new PersonaOO("niela", "Crspo Mora", 0, "90098j"));
 
 		System.out.println("-------FOREACH------");
 
-		for (Persona persona : lista) {
+		for (PersonaOO persona : lista) {
 			System.out.println("prueba" + persona.getNombre());
 		}
 
-		List<Persona> lista2 = new LinkedList<Persona>();
+		List<PersonaOO> lista2 = new LinkedList<PersonaOO>();
 
-		lista2.add(new Persona("Diela1", "Crespo ora", 0, "90098k"));
-		lista2.add(new Persona("Daela2", "Cespo Mora", 0, "90098jk"));
-		lista2.add(new Persona("Danla3", "Crespo Mora", 0, "9098jk"));
-		lista2.add(new Persona("Danie4l", "Cre¡po Mora", 0, "0098jk"));
-		lista2.add(new Persona("Danila5", "CrespoMora", 0, "998jk"));
-		lista2.add(new Persona("niela6", "Crspo Mora", 0, "90098j"));
+		lista2.add(new PersonaOO("Diela1", "Crespo ora", 0, "90098k"));
+		lista2.add(new PersonaOO("Daela2", "Cespo Mora", 0, "90098jk"));
+		lista2.add(new PersonaOO("Danla3", "Crespo Mora", 0, "9098jk"));
+		lista2.add(new PersonaOO("Danie4l", "Cre¡po Mora", 0, "0098jk"));
+		lista2.add(new PersonaOO("Danila5", "CrespoMora", 0, "998jk"));
+		lista2.add(new PersonaOO("niela6", "Crspo Mora", 0, "90098j"));
 
 		// remover en ArrayList
 		lista.remove(1); // borra posicion 1
@@ -44,7 +44,7 @@ public class ArrazListTeoria {
 
 		String nombreBorrar = "daela2";
 
-		for (Persona persona : lista2) {
+		for (PersonaOO persona : lista2) {
 			if (persona.getNombre().equals(nombreBorrar)) {
 				lista.remove(persona);
 				break;

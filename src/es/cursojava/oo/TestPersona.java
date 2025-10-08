@@ -5,7 +5,7 @@ public class TestPersona {
 	public static void main(String[] args) {
 		// creamos el objeto y persona1 apunta a ese objto
 
-		Persona persona1 = new Persona();// instanciar:
+		PersonaOO persona1 = new PersonaOO();// instanciar:
 											// lo inicializa todo por defecto
 		// new genera el espacio en memoria y el constructor, Persona lo inicializa todo
 		// por defect.
@@ -19,7 +19,7 @@ public class TestPersona {
 		System.out.println(persona1.dni);
 
 		// persona 2
-		Persona persona2 = new Persona();
+		PersonaOO persona2 = new PersonaOO();
 		persona2.nombre = "Rala";
 		persona2.apellidos = "Paz";
 		persona2.edad = 2;
@@ -30,7 +30,7 @@ public class TestPersona {
 			// Pregunta de examen que imprime persona1.nombre??
 		persona1.nombre = "marta";
 
-		Persona persona3 = persona1;
+		PersonaOO persona3 = persona1;
 
 		persona3.nombre = "loli";
 		// por que persona3 a modificado el obj que las dos variables apuntan al

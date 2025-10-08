@@ -5,7 +5,7 @@ import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Paciente extends Persona {
+public class Paciente extends PersonaHospital {
 	private String[] sintomas;
 	private static final Logger log = LoggerFactory.getLogger(Paciente.class);
 
