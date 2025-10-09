@@ -67,15 +67,19 @@ VALUES ('Comba de velocidad', 'DEPORTE', 12.99, 35, TO_DATE('25/08/2025','DD/MM/
 INSERT INTO TB_PRODUCTOS_PROFE (nombre, categoria, precio, stock, fecha_alta, estado, codigo_sku)
 VALUES ('Rodillo foam', 'DEPORTE', 16.50, 9, TO_DATE('19/05/2025','DD/MM/YYYY'), 'ACTIVO', 'SKU-D-009');
 
+-- CONSUTAL CONSULTA  CONSUTAL CONSULTA CONSUTAL CONSULTAV CONSUTAL CONSULTA CONSUTAL CONSULTA CONSUTAL CONSULTA CONSUTAL CONSULTA CONSUTAL CONSULTA CONSUTAL CONSULTA
+
 
 -- SINTAXIS SELECT
---SELECT [DISTINCT] 
+
+
+--SELECT [DISTINCT] los campos que vamos a necesitar
        --expr [, expr ...]
 --FROM   fuente [, fuente ...]                -- tabla, vista, subconsulta, JOIN
 --[WHERE  condición]
 --[GROUP BY expr [, expr ...]]
---[HAVING condición_sobre_agregados]
---[ORDER BY expr [ASC|DESC] [NULLS FIRST|LAST] [, ...]]
+--[HAVING condición_sobre_campos_agregados] despues de hacer un GROUP BY
+--[ORDER BY expr [ASC|DESC] [NULLS FIRST|LAST nulos arriba o nulos abajo] [, ...]]
 --[OFFSET n ROWS]                              -- límite/paginación (12c+)
 --[FETCH {FIRST|NEXT} n ROWS ONLY];            -- límite/paginación (12c+)
 
@@ -93,13 +97,17 @@ SELECT * FROM TB_PRODUCTOS_PROFE;
 
 --2) Proyección y ordenación
 
+-- ::::::::::::::::::::::::::::que es Proyección::::::::::::::::::::
+
+--proyección ; los campos que queremos sacar, nombre categoria y precio
+
 --Enunciado: Lista `nombre`, `categoria` y `precio`, ordenado alfabéticamente por `nombre`.
 --Solución:
 
 
 SELECT nombre, categoria, precio
   FROM TB_PRODUCTOS_PROFE
- ORDER BY nombre ASC;
+ ORDER BY nombre ASC, categoria DESC;
 
 
 ---
@@ -113,7 +121,7 @@ SELECT nombre, categoria, precio
 SELECT id, nombre, precio
   FROM TB_PRODUCTOS_PROFE
  WHERE categoria = 'TECNOLOGIA'
-   AND precio BETWEEN 100 AND 300
+   AND precio BETWEEN 100 AND 300 -- PRECIO ENTRE 100 Y 300 NO OR NI AND SI VEINTEMIL VALORES.....
  ORDER BY precio;
 
 
@@ -154,7 +162,9 @@ SELECT id, nombre, fecha_alta
 --Solución:
 
 
-SELECT categoria, COUNT(*) AS total
+SELECT 
+	categoria, 
+	COUNT(*) AS total
   FROM TB_PRODUCTOS_PROFE
  GROUP BY categoria
  ORDER BY total DESC;
@@ -213,7 +223,7 @@ SELECT nombre,
 
 SELECT id, nombre
   FROM TB_PRODUCTOS_PROFE
- WHERE LOWER(nombre) LIKE '%cafe%';
+ WHERE LOWER(nombre) LIKE '%cafe%'; -- LOWER PARA QUE TODO ESTE EN MINUSCULAS!!!!!!!!
 
 
 --11) Media de precio por categoría (solo TECNOLOGIA y HOGAR, activos)
@@ -237,16 +247,20 @@ ORDER BY precio_medio DESC;
 --Solución:
 --Enunciado: Para HOGAR y DEPORTE, en los meses agosto, septiembre, octubre de 2025, agrupa por mes y categoría, muestra stock total. Devuelve solo grupos con stock ≥ 20. Ordena por mes asc, stock desc.
 
-SELECT TRUNC(fecha_alta, 'MM') AS mes,
+SELECT TRUNC(fecha_alta, 'MM') AS mes, --COMO VAMOS A ORGANIZAR POR mes, SOLO POR mes, HACEMOS LA CATEGORIA PARA ORDENARLO !!!!!!
        categoria,
        SUM(stock) AS stock_total
 FROM TB_PRODUCTOS_PROFE
 WHERE categoria IN ('HOGAR','DEPORTE')
-  AND EXTRACT(YEAR  FROM fecha_alta) = 2025
-  AND EXTRACT(MONTH FROM fecha_alta) IN (8,9,10)
-GROUP BY TRUNC(fecha_alta, 'MM'), categoria
-HAVING SUM(stock) >= 20
-ORDER BY mes ASC, stock_total DESC;
+
+-- UTILIZAMOS EXTRACT PARA SACAR EL DATO QUE QUEREMOS Y HACER LA COMPROBACIÓN
+--sacamos los datos solo que estan en el periodo con la fecha completa........
+  AND EXTRACT(YEAR  FROM fecha_alta) = 2025 
+  AND EXTRACT(MONTH FROM fecha_alta) IN (8,9,10) 
+  --para agrupar por mes necesito que el dia sean todos igual para que pueda agrupar por mes!!!!  si no agruparia por mes pero contandos con los dias que son distintos...
+GROUP BY TRUNC(fecha_alta, 'MM'), categoria 
+HAVING SUM(stock) >= 20 --Devuelve solo grupos con stock ≥ 20!!!!!!
+ORDER BY mes ASC, stock_total DESC; -- UTILIZO mes PARA ORDENAR!!!!!! que lo he creado con el AS en el SELECT!!!!!!
 
 
 ---
@@ -293,7 +307,8 @@ ORDER BY precio_medio DESC;
 
 --15) Control de “rotación cero” dentro de categorías
 
---Enunciado: Sobre HOGAR y DEPORTE, agrupa por categoría y estado y calcula cuántos tienen stock = 0 y el precio medio. Devuelve solo grupos con al menos 1 producto con stock 0 y precio medio ≥ 20. Ordena por categoría, estado.
+--Enunciado: Sobre HOGAR y DEPORTE, agrupa por categoría y estado y calcula cuántos tienen stock = 0 y el precio medio. 
+--Devuelve solo grupos con al menos 1 producto con stock 0 y precio medio ≥ 20. Ordena por categoría, estado.
 --Solución:
 
 SELECT categoria,
@@ -307,3 +322,19 @@ HAVING SUM(CASE WHEN stock = 0 THEN 1 ELSE 0 END) >= 1
    AND AVG(precio) >= 20
 ORDER BY categoria ASC, estado ASC;
 
+
+
+--ojo que tb tengo q practicar esto
+
+Clasificar salarios
+--------------------------------------------------------
+SELECT
+  nombre,
+  salario,
+  CASE
+    WHEN salario >= 45000 THEN 'Alto'
+    WHEN salario >= 35000 THEN 'Medio'
+    ELSE 'Bajo'
+  END AS tramo_salarial
+FROM empleados
+ORDER BY salario DESC;
