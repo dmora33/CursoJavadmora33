@@ -1,6 +1,7 @@
 package es.cursojava.oo;
 
 import java.util.Arrays;
+import java.util.Set;
 
 //crear metodo: estudiar ("el estudiante" + nombre + y tiene las asignaturas...
 // y si su notaMedia es < 5 ha estudiado poco, si es >5 ha estudiado mucho, si
@@ -85,6 +86,11 @@ public class Alumno {
 		} else {
 			datosAlumno("es un genio");
 		}
+	}
+
+	public static Set<Alumno> subList(double d) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
