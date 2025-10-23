@@ -1,10 +1,11 @@
 package es.cursojava.utils;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 //pasar un año y clacular la edad 
 public class Utilidades {
-		public static void validarMail(String email) {
+	public static void validarMail(String email) {
 
 		String mensajeError = "";
 
@@ -51,7 +52,7 @@ public class Utilidades {
 		}
 
 	}
-	
+
 	public static void pintaCuadrado() {
 		int tamano = Utilidades.pideDatoNumerico("dime un numero para el cuadrado");
 		for (int i = 0; i <= tamano - 1; i++) {
@@ -72,19 +73,18 @@ public class Utilidades {
 		}
 
 	}
-	
+
 	public static void pintaMenu(String[] opciones) {
 //		for (String opcion : opciones) {
 //			System.out.print(opcion + "\n");
 //		}
 		pintaMenu(opciones, "intruduce una opción");
 		// System.out.println("Escoge una opción:");
-		
-		
+
 	}
-	
+
 	public static void anadirAlumn(String[][] colegio) {
-	//String nombre = Utilidades.pideDatoCadena("\nNombre del alumno:\n");
+		// String nombre = Utilidades.pideDatoCadena("\nNombre del alumno:\n");
 		boolean hayHueco = false;
 		for (int i = 0; i < colegio.length; i++) {
 			for (int j = 0; j < colegio[i].length; j++) {
@@ -113,9 +113,10 @@ public class Utilidades {
 	public static void pintaMenu(String[] opciones, String texto) {
 		for (String opcion : opciones) {
 			System.out.print(opcion + "\n");
-	}
+		}
 
-		// pitnaMenu (); no valdria por que saldría todo el rato ESCOGE UNA OPCIÓN!!!!!!!
+		// pitnaMenu (); no valdria por que saldría todo el rato ESCOGE UNA
+		// OPCIÓN!!!!!!!
 
 		System.out.print(texto + "\n");
 	}
@@ -148,4 +149,16 @@ public class Utilidades {
 
 		return edad;
 	}
+
+	public static String NombreAleatorio(String[] args) {
+		String[] nombres = { "Juan", "Ana", "Carlos", "Lucía", "Pedro", "María" };
+		String[] apellidos = { "García", "López", "Pérez", "Fernández", "Rodríguez", "Sánchez" };
+
+		String nombre = nombres[ThreadLocalRandom.current().nextInt(nombres.length)];
+		String apellido = apellidos[ThreadLocalRandom.current().nextInt(apellidos.length)];
+
+		System.out.println("Nombre aleatorio: " + nombre + " " + apellido);
+		return nombre + " " + apellido;
+	}
+
 }

@@ -15,8 +15,17 @@ public class Colegio {
 	public Colegio(String nombre, String dirección, Map<String, List<Alumno>> aulas) {
 		this.nombre = nombre;
 		this.dirección = dirección;
-		this.aulas = new HashMap<String, List<Alumno>>(); // siempre inicializar con HashMap
+		this.aulas = aulas;
 	}
+
+	public Colegio(String nombre, String dirección) {
+		super();
+		this.nombre = nombre;
+		this.dirección = dirección;
+		this.aulas = new HashMap<>(); // siempre inicializar con HashMap
+
+	}
+
 //get y set
 	public String getNombre() {
 		return nombre;

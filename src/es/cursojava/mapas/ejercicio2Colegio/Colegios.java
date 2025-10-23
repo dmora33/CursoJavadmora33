@@ -1,23 +1,46 @@
 package es.cursojava.mapas.ejercicio2Colegio;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import es.cursojava.oo.Alumno;
 
 public class Colegios {
 
 	public static void main(String[] args) {
-		Map<String, List<Alumno>> aulas1 = generaAlulasRandom();
-		Map<String, List<Alumno>> aulas2 = generaAlulasRandom();
-		Map<String, List<Alumno>> aulas3 = generaAlulasRandom();
+		Map<String, List<Alumno>> aulas1 = generaAulasRandom();
+		Map<String, List<Alumno>> aulas2 = generaAulasRandom();
+		Map<String, List<Alumno>> aulas3 = generaAulasRandom();
 
 		Colegio colegio1 = new Colegio("colegio1", "Getafe", aulas1);
 
 		Colegio colegio2 = new Colegio("colegio2", "Getafe", aulas2);
 		Colegio colegio3 = new Colegio("colegio3", "Getafe", aulas3);
+
+		// Crear 3 colegios -> Meterlos en una lista y:
+		// + recorrer la lista de colegios para mostrar los datos de cada colegio, el
+		// nombre de cada aula del colegio y por cada aula, el nombre, el apellido y la
+		// nota media de sus alumnos
+		List<Colegio> colegios = Arrays.asList(colegio3, colegio2, colegio1);
+
+		// en null ponemos colegio1,2 o 3.
+
+		// colegios.get(0).setAulas(null);
+
+		// Añadir un nuevo alumno a un aula existente ESTA MAL EL CODIGO DE AÑADIR!!!!!!
+//		colegio2.getAulas().get("aula1").add(new Alumno("Nuevo", "9999999X", 8.5));
+//
+//		// Añadir un aula nueva con alumnos
+//		colegio2.getAulas().put("aula4", generaAlumnosRandom());
+
+		// enseñar datos colegios
+		mostrarTodoColegios(colegios);
+
+		mostrarColegioConMejorNotaMedia(colegios);
 
 	}
 
@@ -35,7 +58,7 @@ public class Colegios {
 		return alumnos;
 	}
 
-	private static Map<String, List<Alumno>> generaAlulasRandom() {
+	private static Map<String, List<Alumno>> generaAulasRandom() {
 
 		List<Alumno> alumnos1 = generaAlumnosRandom();
 
@@ -47,4 +70,83 @@ public class Colegios {
 
 		return aulas1;
 	}
+
+//	private static void mostrarTodoColegios(List<Colegio> colegios) {
+//
+//		for (Colegio colegio : colegios) {
+//			System.out.println(colegio);// como tenemos metodo sobrecargado toString lo usa por defecto.
+//			Map<String, List<Alumno>> aulas = colegio.getAulas();
+//
+//			Set<String> nombresAulas = colegio.getAulas().keySet();// sacamos un listado de los nombres de las aulas
+//																	// guardado en un set
+//			for (String aula : nombresAulas) {
+//				System.out.println("\t" + aula); // nombre del aula que es la clave del mapa aulas
+//				List<Alumno> alumnos = aulas.get(aula);
+//				for (Alumno alumno : alumnos) {
+//					System.out.println("\t\t" + alumno);
+//				}
+//			}
+//
+//		}
+//	}
+	private static void mostrarTodoColegios(List<Colegio> colegios) {
+		for (Colegio colegio : colegios) {
+			System.out.println(colegio); // Usa toString del colegio
+			Map<String, List<Alumno>> aulas = colegio.getAulas();
+
+			for (String aula : aulas.keySet()) {
+				System.out.println("\tAula: " + aula);
+				List<Alumno> alumnos = aulas.get(aula);
+				for (Alumno alumno : alumnos) {
+					System.out.println("\t\t" + alumno); // Usa toString del alumno
+				}
+			}
+		}
+	}
+
+	private static void mostrarColegioConMejorNotaMedia(List<Colegio> colegios) {
+		Colegio mejorColegio = null;
+		double mejorMedia = -1;
+
+		for (Colegio colegio : colegios) {
+			double sumaNotas = 0;
+			int totalAlumnos = 0;
+
+			Map<String, List<Alumno>> aulas = colegio.getAulas();
+			for (List<Alumno> alumnos : aulas.values()) {
+				for (Alumno alumno : alumnos) {
+					sumaNotas += alumno.getNotaMedia();
+					totalAlumnos++;
+				}
+			}
+
+			double mediaColegio;
+			if (totalAlumnos > 0) {
+				mediaColegio = sumaNotas / totalAlumnos;
+			} else {
+				mediaColegio = 0;
+			}
+
+			// Redondear la media a dos decimales
+			// double mediaRedondeada = Math.round(mediaColegio * 100.0) / 100.0;
+
+			System.out.println("Media de " + colegio.getNombre() + ": " + mediaColegio);
+
+			if (mediaColegio > mejorMedia) {
+				mejorMedia = mediaColegio;
+				mejorColegio = colegio;
+			}
+		}
+
+		if (mejorColegio != null) {
+			// Redondear la mejor media también
+			double mejorMediaRedondeada = Math.round(mejorMedia * 100.0) / 100.0;
+
+			System.out.println("El colegio con mejor nota media es: " + mejorColegio.getNombre() + " (Media: "
+					+ mejorMediaRedondeada + ")");
+		} else {
+			System.out.println("No hay datos suficientes para calcular la nota media.");
+		}
+	}
+
 }
