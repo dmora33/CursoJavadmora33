@@ -10,8 +10,23 @@ import java.util.Map;
 import es.cursojava.utils.Utilidades;
 
 public class InicioBiblioteca {
+	
+	
+	//TODO:Solicitar los datos de un libro, autor, titulo, isbn y año de publicación, 
+//	- si el autor no está en la biblioteca, solicitar la nacionalidad del autor y meterlo en la biblioteca, 
+//	- si el autor sí está ya, agregar el libro a su listado
+	
+	
+	private static void librosPubclicadosAnio(int anio, Map<Autor, List<Libro>> libreria) {
+		
+	}
+	
+	
+	private static void nacionalidadAutor(Map<Autor, List<Libro>> libreria) {
+		
+	}
 
-	private static void eliminarLibro(String isbn, Map<Autor, List<Libro>> libreria) {
+	private static void eliminarLibroIsbn(String isbn, Map<Autor, List<Libro>> libreria) {
 
 	}
 
@@ -58,5 +73,6 @@ public class InicioBiblioteca {
 		libreria.put(autor4, listaLibrosAutor4);
 
 	}
+	
 
 }
