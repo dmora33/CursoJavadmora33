@@ -117,6 +117,7 @@ public class InicioBiblioteca {
 
 		List<Libro> listaLibrosAutor1 = new ArrayList();
 		listaLibrosAutor1.add(libro0);
+		
 		listaLibrosAutor1.add(libro1);
 		// listaLibrosAutor1.add(libro2);
 
