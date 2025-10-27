@@ -6,9 +6,9 @@ Objetivo. Modelar y consultar una relación 1:1 estricta entre EMPLEADO y CREDEN
 
 Tareas:
 
-Modelo de datos
+Modelo de datos DDL
 
-Crea la tabla EMPLEADO con: EMPLOYEE_ID (PK), FULL_NAME, HIRED_ON.
+Crea la tabla EMPLEADO con: EMPLOYEE_ID (PK), FULL_NAME, HIRED_ON FEHCA DE CONTRATACIÓN.
 
 Crea la tabla CREDENCIAL_ACCESO con:
 
@@ -18,13 +18,13 @@ Campos: RFID_CODE (único), ISSUED_ON.
 
 Si se borra un empleado, su credencial debe borrarse automáticamente.
 
-Carga de datos
+Carga de datos DML
 
 Inserta 3 empleados.
 
 Asigna credencial a 2 de ellos; deja 1 sin credencial.
 
-Consultas
+Consultas DML O DQL
 
 a) Lista solo los empleados con credencial
 

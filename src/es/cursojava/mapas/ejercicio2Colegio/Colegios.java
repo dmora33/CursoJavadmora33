@@ -1,11 +1,10 @@
 package es.cursojava.mapas.ejercicio2Colegio;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import es.cursojava.oo.Alumno;
 
@@ -113,7 +112,8 @@ public class Colegios {
 			int totalAlumnos = 0;
 
 			Map<String, List<Alumno>> aulas = colegio.getAulas();
-			for (List<Alumno> alumnos : aulas.values()) {
+			Collection<List<Alumno>> listadosAlumnos = aulas.values();
+			for (List<Alumno> alumnos : listadosAlumnos) {
 				for (Alumno alumno : alumnos) {
 					sumaNotas += alumno.getNotaMedia();
 					totalAlumnos++;
@@ -140,10 +140,10 @@ public class Colegios {
 
 		if (mejorColegio != null) {
 			// Redondear la mejor media también
-			double mejorMediaRedondeada = Math.round(mejorMedia * 100.0) / 100.0;
+		//	double mejorMediaRedondeada = Math.round(mejorMedia * 100.0) / 100.0;
 
 			System.out.println("El colegio con mejor nota media es: " + mejorColegio.getNombre() + " (Media: "
-					+ mejorMediaRedondeada + ")");
+					+ mejorMedia + ")");
 		} else {
 			System.out.println("No hay datos suficientes para calcular la nota media.");
 		}
