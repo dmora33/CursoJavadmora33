@@ -1,5 +1,6 @@
 package es.cursojava.utils;
 
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -159,6 +160,10 @@ public class Utilidades {
 
 		System.out.println("Nombre aleatorio: " + nombre + " " + apellido);
 		return nombre + " " + apellido;
+	}
+	public static int numeroAleatorio(int rangoValoresInc, int rangoValoresFinal) {
+		Random randomNumero = new Random();
+		return randomNumero.nextInt(rangoValoresInc,rangoValoresFinal);
 	}
 
 }
