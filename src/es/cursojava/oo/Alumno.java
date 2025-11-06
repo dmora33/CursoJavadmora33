@@ -3,6 +3,8 @@ package es.cursojava.oo;
 import java.util.Arrays;
 import java.util.Set;
 
+import es.cursojava.excepciones.ejercicios.ejercicio1.NotaInvalidaExecption;
+
 //crear metodo: estudiar ("el estudiante" + nombre + y tiene las asignaturas...
 // y si su notaMedia es < 5 ha estudiado poco, si es >5 ha estudiado mucho, si
 // notaMedia>9 es un genio )
@@ -19,9 +21,10 @@ public class Alumno {
 	public Alumno(String nombre, String dni) {
 		this.nombre = nombre;
 		this.dni = dni;
+
 	}
 
-	public Alumno(String nombre, String dni, int edad, double notaMedia, String[] asignaturas) {
+	public Alumno(String nombre, String dni, double notaMedia, String[] asignaturas) {
 		this.nombre = nombre;
 		this.dni = dni;
 		this.notaMedia = notaMedia;

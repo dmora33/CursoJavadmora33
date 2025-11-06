@@ -5,6 +5,8 @@ import es.cursojava.utils.Utilidades;
 public class ControlPideDatoNumericoErrorLetras {
 	public static void main(String[] args) {
 
+		GetafeException npe = new GetafeException("Daniela es la más buena de las bebes");
+
 		boolean correcto = false;
 		do {
 			try {
@@ -19,5 +21,7 @@ public class ControlPideDatoNumericoErrorLetras {
 			}
 		} while (!correcto);
 
+		
+		throw npe;
 	}
 }

@@ -1,5 +1,6 @@
 package es.cursojava.utils;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -123,11 +124,17 @@ public class Utilidades {
 	}
 
 	public static int pideDatoNumerico(String texto) {
-		Scanner scan = new Scanner(System.in);
+		int numero = 0;
 		System.out.println(texto);
-		int numero = scan.nextInt();
-		// scan.close();
-		return numero;
+		Scanner scan = new Scanner(System.in);
+
+		try {
+			return scan.nextInt();
+		} catch (InputMismatchException | NumberFormatException e) {
+			System.out.println("No has introducido un valor correcto");
+			return pideDatoNumerico(texto);
+		}
+
 	}
 
 	public static String pideDatoCadena(String texto) {
@@ -151,7 +158,7 @@ public class Utilidades {
 		return edad;
 	}
 
-	public static String NombreAleatorio(String[] args) {
+	public static String NombreApellidoAleatorio() {
 		String[] nombres = { "Juan", "Ana", "Carlos", "Lucía", "Pedro", "María" };
 		String[] apellidos = { "García", "López", "Pérez", "Fernández", "Rodríguez", "Sánchez" };
 
@@ -161,9 +168,17 @@ public class Utilidades {
 		System.out.println("Nombre aleatorio: " + nombre + " " + apellido);
 		return nombre + " " + apellido;
 	}
+
+	public static String NombreAleatorio() {
+		String[] nombres = { "Juan", "Ana", "Carlos", "Lucía", "Pedro", "María" };
+		String nombre = nombres[ThreadLocalRandom.current().nextInt(nombres.length)];
+		System.out.println("Nombre aleatorio: " + nombre);
+		return nombre;
+	}
+
 	public static int numeroAleatorio(int rangoValoresInc, int rangoValoresFinal) {
 		Random randomNumero = new Random();
-		return randomNumero.nextInt(rangoValoresInc,rangoValoresFinal);
+		return randomNumero.nextInt(rangoValoresInc, rangoValoresFinal);
 	}
 
 }
