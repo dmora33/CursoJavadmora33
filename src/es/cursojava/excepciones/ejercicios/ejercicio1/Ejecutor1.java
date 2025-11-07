@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import es.cursojava.utils.Utilidades;
+import sun.jvm.hotspot.gc.parallel.PSYoungGen;
 
 public class Ejecutor1 {
 
@@ -34,7 +35,8 @@ public class Ejecutor1 {
 	 */
 
 	public static void main(String[] args) {
-
-	}
+		String nombre = Utilidades.NombreAleatorio();
+System.out.println(nombre);
+}
 
 }
