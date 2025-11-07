@@ -170,7 +170,8 @@ public class Utilidades {
 	}
 
 	public static String NombreAleatorio() {
-		String[] nombres = { "Juan", "Ana", "Carlos", "Lucía", "Pedro", "María" };
+		String[] nombres = { "Juan", "Ana", "Carlos", "Lucía", "Pedro", "María", "Amparo", "Geese", "Juanjo", "Pepito",
+				"Carlitos", };
 		String nombre = nombres[ThreadLocalRandom.current().nextInt(nombres.length)];
 		System.out.println("Nombre aleatorio: " + nombre);
 		return nombre;
@@ -181,9 +182,9 @@ public class Utilidades {
 		return randomNumero.nextInt(rangoValoresInc, rangoValoresFinal);
 	}
 
-	public static int numeroAleatorio(int rangoValoresInc) {
+	public static int numeroAleatorio(int rangoValores) {
 		Random randomNumero = new Random();
-		return randomNumero.nextInt(rangoValoresInc);
+		return randomNumero.nextInt(rangoValores);
 	}
 
 }

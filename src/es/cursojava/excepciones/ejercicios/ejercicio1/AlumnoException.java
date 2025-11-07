@@ -19,45 +19,19 @@ public class AlumnoException {
 
 	}
 
-	public AlumnoException(String nombre, String dni, int edad) throws IllegalAccessException, NotaInvalidaExecption {
-		this.nombre = nombre;
-		this.dni = dni;
-		this.edad = edad;
-		if (edad < 0) {
-			IllegalAccessException iae = new IllegalAccessException("no puede ser menor de 0");
-			throw iae;
-		} else if (edad >= 0 && edad < 11) {
-			NotaInvalidaExecption nie = new NotaInvalidaExecption("edad de 0 a diez");
-			throw nie;
-		}
-
-	}
-
-	public AlumnoException(int edad) throws IllegalAccessException, NotaInvalidaExecption {
-
-		this.edad = edad;
-		if (edad < 0) {
-			IllegalAccessException iae = new IllegalAccessException("no puede ser menor de 0");
-			throw iae;
-		} else if (edad >= 0 && edad < 11) {
-			NotaInvalidaExecption nie = new NotaInvalidaExecption("edad de 0 a diez");
-			throw nie;
-		}
-
-	}
-
-	public AlumnoException(String nombre, String dni, double notaMedia, String[] asignaturas) {
-		this.nombre = nombre;
-		this.dni = dni;
-		this.notaMedia = notaMedia;
-		this.asignaturas = asignaturas;
-	}
-
-	public AlumnoException(String nombre, String dni, double notaMedia) {
+	public AlumnoException(String nombre, String dni,int edad, double notaMedia) throws NotaInvalidaExecption, IllegalAccessException {
 		super();
 		this.nombre = nombre;
+		this.edad=edad;
 		this.dni = dni;
 		this.notaMedia = notaMedia;
+		if (edad < 0) {
+			IllegalAccessException iae = new IllegalAccessException("no puede ser menor de 0");
+			throw iae;
+		} else if (notaMedia >= 0 && notaMedia > 10) {
+			// esto es otra manera de crear la excepción.
+			throw new NotaInvalidaExecption("edad de 0 a diez");
+		}
 	}
 
 	public String getNombre() {
@@ -66,6 +40,14 @@ public class AlumnoException {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
 
 	public String getDni() {
@@ -99,8 +81,8 @@ public class AlumnoException {
 
 	@Override
 	public String toString() {
-		return "Alumno [nombre=" + nombre + ", dni=" + dni + ", notaMedia=" + notaMedia + ", asignaturas="
-				+ Arrays.toString(asignaturas) + "]";
+		return "AlumnoException [nombre=" + nombre + ", dni=" + dni + ", notaMedia=" + notaMedia + ", asignaturas="
+				+ Arrays.toString(asignaturas) + ", edad=" + edad + "]";
 	}
 
 	public void estudiar() {

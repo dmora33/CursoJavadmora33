@@ -7,7 +7,7 @@ public class CondicionalesSwitch {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 				String mes = "";
-				System.out.println("Di un mes del año");
+				System.out.println("\tDi un mes del año");
 		mes = scan.nextLine();
 		switch (mes) {
 		case "enero" : 
