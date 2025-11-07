@@ -181,4 +181,9 @@ public class Utilidades {
 		return randomNumero.nextInt(rangoValoresInc, rangoValoresFinal);
 	}
 
+	public static int numeroAleatorio(int rangoValoresInc) {
+		Random randomNumero = new Random();
+		return randomNumero.nextInt(rangoValoresInc);
+	}
+
 }
