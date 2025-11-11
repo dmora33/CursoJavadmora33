@@ -8,7 +8,8 @@ import java.sql.Statement;
 import es.cursojava.utils.UtilidadesBD;
 
 public class ConsultaProductos {
-	private static final String CONSULTA_PRODUCTOS = "" + " ";
+	private static final String CONSULTA_PRODUCTOS = "SELECT"
+			+ "NOMBRE,CATEGORIA,PRECIO,STOCK,FECHA_ALTA,ESTADO,CODIGO_SKU,CREADO_POR,IVA" + "FROM tb_productos";
 
 	public static void main(String[] args) {
 
@@ -25,13 +26,8 @@ public class ConsultaProductos {
 			st = conexion.createStatement();
 			rs = st.executeQuery(CONSULTA_PRODUCTOS);
 			while (rs.next()) {
-				int id = rs.getInt("ID");
-				String nombre = rs.getString("NOMBRE");
-				int edad = rs.getInt("EDAD");
-				double salario = rs.getDouble("SALARIO");
-
-				System.out.println("Registro.[ id: " + id + ", nombre: " + nombre + ", edad: " + edad + ", salario: "
-						+ salario + "]");
+				// rs.next si hay siguiente campo ....
+				int id = rs.getInt("id");
 
 			}
 		} catch (SQLException e) {
