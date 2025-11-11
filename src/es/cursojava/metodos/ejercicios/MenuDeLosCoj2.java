@@ -2,7 +2,7 @@ package es.cursojava.metodos.ejercicios;
 
 import java.util.Scanner;
 
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 public class MenuDeLosCoj2 {
 

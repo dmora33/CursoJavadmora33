@@ -1,6 +1,6 @@
 package es.cursojava.excepciones.ejercicios;
 
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 public class EjercicioExcepciones {
 

@@ -2,7 +2,7 @@ package es.cursojava.controlException;
 
 import java.sql.Array;
 
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 public class EjercicioControlExecpciones {
 

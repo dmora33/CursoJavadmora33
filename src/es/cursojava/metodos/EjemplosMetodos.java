@@ -3,7 +3,7 @@
 package es.cursojava.metodos;
 
 import es.cursojava.oo.PersonaOO;
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 /**
  * PARA QUE FUNCIONES HAY QUE UTILIZAR UTILS DEL PROYECTO PROF.

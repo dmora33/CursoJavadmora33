@@ -1,0 +1,18 @@
+# Contenedor 1: "ubuntu-dev"
+docker run -d --name ubuntu-dev2 \
+  --hostname devbox \
+  -e MODE=dev -e TZ=Europe/Madrid \
+  -v ./devdata:/data \
+  --cpus="1.0" --memory="1g" \
+  ubuntu:22.04 sleep infinity
+
+# Contenedor 2: "ubuntu-test"
+docker run -d --name ubuntu-test2 \
+  --hostname testbox \
+  -e MODE=test \
+  -v ./testdata:/data \
+  --cpus="0.5" --memory="512m" \
+  ubuntu:22.04 sleep infinity
+
+
+docker exec -it ubuntu-dev2 bash

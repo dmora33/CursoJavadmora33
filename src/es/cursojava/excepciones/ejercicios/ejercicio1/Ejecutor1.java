@@ -3,7 +3,7 @@ package es.cursojava.excepciones.ejercicios.ejercicio1;
 import java.util.ArrayList;
 import java.util.List;
 
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 public class Ejecutor1 {
 

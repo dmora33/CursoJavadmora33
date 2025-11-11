@@ -1,6 +1,6 @@
 package es.cursojava.controlException;
 
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 public class ControlPideDatoNumericoErrorLetras {
 	public static void main(String[] args) {

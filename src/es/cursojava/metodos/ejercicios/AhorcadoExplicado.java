@@ -1,6 +1,6 @@
 package es.cursojava.metodos.ejercicios;
 
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 /**
  * Clase que implementa la lógica para el juego del Ahorcado.

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import es.cursojava.oo.Alumno;
-import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.Utilidades;
 
 public class MapaColegio {
 
