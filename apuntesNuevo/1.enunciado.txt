@@ -1,0 +1,21 @@
+-Crear el directorio books en el home del usuario ubuntu:
+mkdir ~/books -> para no tener que precuparme de saber donde estoy y crear el directorio
+ls ../books -> para listar lo que hay en el dircetorio 'books' sin ir a ese directorio
+-Pasar el fichero file al directorio books:
+desde windows:
+scp -P 2222 file ubuntu@localhost:/home/ubuntu/books
+(primero el nombre del fichero porque es el origen y despues la ruta porque es el destino )
+scp -P 2222 C:\Users\file ubuntu@localhost:/home/ubuntu/books 
+(si no estuviera el fichero ahi deberiamos poner la ruta absoluta de origen )
+-Hay que ver de que libro se trata:
+less file
+head file -> vemos la cabecera del archivo
+-Modifiacr el contenido del fichero añadiendo 1 linea al principio y lo guardais
+vim file.txt (no es necesario poner la extensión)
+nano file
+-Visualizar el cambio:
+
+-Descargar el fichero a vuestra máquina con el nombre del libro y la extensión .txt (no cambiar el nombre en la MV)
+desde ubuntu:  scp file DonQuijote
+desde windows:  scp file  ubuntu@localhost:books/file DonQuijote
+

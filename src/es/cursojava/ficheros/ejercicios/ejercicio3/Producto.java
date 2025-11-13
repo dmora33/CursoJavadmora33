@@ -1,4 +1,4 @@
-package es.cursojava.bbdd;
+package es.cursojava.ficheros.ejercicios.ejercicio3;
 
 import java.util.Date;
 

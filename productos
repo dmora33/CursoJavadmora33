@@ -1,0 +1,5 @@
+Producto(id=1|nombre=Portátil14"|categoria=TECNOLOGIA|precio=799.0|stock=1|fecha_alta=2025-09-01|estado=ACTIVO|codigo_sku=SKU-T-001|creado_por=GETAFE|iva=21)
+Producto(id=2|nombre=AuricularesBT|categoria=TECNOLOGIA|precio=59.9|stock=2|fecha_alta=2025-11-11|estado=ACTIVO|codigo_sku=SKU-T-002|creado_por=GETAFE|iva=21)
+Producto(id=3|nombre=Sartén28cm|categoria=HOGAR|precio=24.5|stock=3|fecha_alta=2025-08-15|estado=ACTIVO|codigo_sku=SKU-H-001|creado_por=GETAFE|iva=21)
+Producto(id=4|nombre=Almohadavisco|categoria=HOGAR|precio=35.0|stock=4|fecha_alta=2025-11-11|estado=ACTIVO|codigo_sku=SKU-H-002|creado_por=GETAFE|iva=21)
+Producto(id=5|nombre=Cintaelástica|categoria=DEPORTE|precio=0.0|stock=5|fecha_alta=2025-11-11|estado=INACTIVO|codigo_sku=SKU-D-001|creado_por=GETAFE|iva=21)
