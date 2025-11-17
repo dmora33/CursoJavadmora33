@@ -35,3 +35,9 @@
 16:15:52.389 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.Instrumento - Tocando el instrumentotambor1
 16:15:52.390 [main] INFO  es.cursojava.oo.herencia.ejercicios.bandaMusica.BandaMusica - La banda suena mal por que esta dafinada
 >>>>>>> branch 'main' of https://github.com/dmora33/CursoJavadmora33
+16:25:37.790 [main] INFO  es.cursojava.ficheros.ejercicios.Ejercicio1Ficheros - La extension del fichero perdido.txt es .txt
+16:25:37.794 [main] ERROR es.cursojava.ficheros.ejercicios.Ejercicio1Ficheros - Fichero C:\Users\Tardes\Ficheros\documentos\perdido.txt no creado por El sistema no puede encontrar la ruta especificada
+16:26:14.031 [main] INFO  es.cursojava.ficheros.ejercicios.Ejercicio1Ficheros - La extension del fichero c:\perdido.txt es .txt
+16:26:14.032 [main] ERROR es.cursojava.ficheros.ejercicios.Ejercicio1Ficheros - Fichero C:\Users\Tardes\Ficheros\documentos\c:\perdido.txt no creado por El nombre de archivo, el nombre de directorio o la sintaxis de la etiqueta del volumen no son correctos
+16:27:57.016 [main] INFO  es.cursojava.ficheros.ejercicios.Ejercicio1Ficheros - La extension del fichero temato.txt es .txt
+16:27:57.017 [main] ERROR es.cursojava.ficheros.ejercicios.Ejercicio1Ficheros - Fichero C:\Users\Tardes\Ficheros\documentos\temato.txt no creado por El sistema no puede encontrar la ruta especificada
