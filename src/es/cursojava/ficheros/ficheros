@@ -1,0 +1,134 @@
+✅ 1. Crear un archivo vacío (java.io.File)
+import java.io.File;
+import java.io.IOException;
+
+public class CrearArchivo {
+    public static void main(String[] args) {
+        try {
+            File archivo = new File("miArchivo.txt");
+
+            if (archivo.createNewFile()) {
+                System.out.println("Archivo creado: " + archivo.getName());
+            } else {
+                System.out.println("El archivo ya existe.");
+            }
+
+        } catch (IOException e) {
+            System.out.println("Ocurrió un error.");
+            e.printStackTrace();
+        }
+    }
+}
+
+
+✔ Crea un archivo en la raíz del proyecto
+✔ Si ya existe, no lo sobreescribe
+
+✅ 2. Crear un archivo y escribir dentro (FileWriter)
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class CrearYEscribir {
+    public static void main(String[] args) {
+        try {
+            FileWriter escritor = new FileWriter("datos.txt");
+
+            escritor.write("Hola, este es mi archivo creado desde Java.\n");
+            escritor.write("Otra línea más.");
+
+            escritor.close();
+            System.out.println("Archivo creado y escrito correctamente.");
+
+        } catch (IOException e) {
+            System.out.println("Error al escribir el archivo.");
+            e.printStackTrace();
+        }
+    }
+}
+
+
+✔ Si el archivo no existe → lo crea
+✔ Si existe → lo sobrescribe (para añadir texto mira el siguiente ejemplo)
+
+✅ 3. Escribir SIN borrar lo que ya hay (FileWriter append = true)
+FileWriter escritor = new FileWriter("datos.txt", true);
+escritor.write("Nueva línea añadida sin borrar lo anterior.\n");
+escritor.close();
+
+✅ 4. Crear carpetas y luego un archivo (mkdirs)
+File carpeta = new File("misDatos/usuarios");
+carpeta.mkdirs(); // crea todas las carpetas si no existen
+
+File archivo = new File(carpeta, "info.txt");
+archivo.createNewFile();
+
+✅ 5. Usar Files (moderno, recomendado)
+import java.nio.file.*;
+
+public class CrearConFiles {
+    public static void main(String[] args) {
+        try {
+            Path ruta = Paths.get("archivos/ejemplo.txt");
+            Files.createDirectories(ruta.getParent()); // crea carpetas
+
+            Files.writeString(ruta, "Archivo creado con Files.\nEs moderno y sencillo.");
+
+            System.out.println("Archivo creado correctamente.");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+1. Crear un directorio con File (modo clásico)
+✔ Crear una sola carpeta
+import java.io.File;
+
+public class CrearDirectorio {
+    public static void main(String[] args) {
+        File carpeta = new File("miCarpeta");
+
+        if (carpeta.mkdir()) {
+            System.out.println("Directorio creado correctamente.");
+        } else {
+            System.out.println("No se pudo crear el directorio (ya existe o ruta inválida).");
+        }
+    }
+}
+
+
+📝 mkdir() solo crea un nivel de carpeta.
+
+✔ Crear varias carpetas anidadas
+File carpetas = new File("datos/jugadores/partidas");
+
+if (carpetas.mkdirs()) {
+    System.out.println("Carpetas creadas correctamente.");
+} else {
+    System.out.println("No se pudieron crear las carpetas.");
+}
+
+
+📝 mkdirs() crea TODAS las carpetas necesarias, aunque no existan.
+
+🟩 2. Crear un directorio con Files (modo moderno y recomendado)
+import java.nio.file.*;
+
+public class CrearDirectorioNIO {
+    public static void main(String[] args) {
+        try {
+            Path ruta = Paths.get("archivos/nuevosDatos");
+            Files.createDirectories(ruta);
+
+            System.out.println("Directorio creado con éxito.");
+        } catch (Exception e) {
+            System.out.println("Error al crear el directorio.");
+            e.printStackTrace();
+        }
+    }
+}
+
+
+✔ createDirectories() funciona como mkdirs(): crea todas las carpetas necesarias.
+✔ Files y Path son más modernos y seguros.
