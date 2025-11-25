@@ -33,6 +33,8 @@
 			(Hibernate 5.5+). -->
 		<!-- Entidad mapeada -->
 		<mapping class="es.cursojava.hibernate.Empresa" />
+		<!-- Añadimos el mapping para la entidad Curso -->
+		<mapping class="es.cursojava.hibernate.ejercicio1.entites.Curso" />
 
 	</session-factory>
 </hibernate-configuration>

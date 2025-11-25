@@ -12,6 +12,13 @@
           <exclude>**/*.java</exclude>
         </excludes>
       </resource>
+      <!-- Añadimos el directorio resources para que hibernate.cfg.xml se incluya en el classpath -->
+      <resource>
+        <directory>resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
     </resources>
     <plugins>
       <plugin>

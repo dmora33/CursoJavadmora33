@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
 @Entity
 @Table(name = "TB_EMPRESA")
 public class Empresa {
@@ -22,24 +23,25 @@ public class Empresa {
 	@Column(name = "actividad")
 	private String tipoActividad;
 	private Date fechaConstitucion;
-
+	
 	public Empresa() {
 		super();
 	}
-
-	public Empresa(long id, String nombre, String tipoSociedad, String cif, String tipoActividad,
+	
+	public Empresa( String nombre, String tipoSociedad, String cif, String tipoActividad,
 			Date fechaConstitucion) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.tipoSociedad = tipoSociedad;
 		this.cif = cif;
 		this.tipoActividad = tipoActividad;
 		this.fechaConstitucion = fechaConstitucion;
 	}
-
-	public Empresa(String nombre, String tipoSociedad, String cif, String tipoActividad, Date fechaConstitucion) {
+	
+	public Empresa(long id, String nombre, String tipoSociedad, String cif, String tipoActividad,
+			Date fechaConstitucion) {
 		super();
+		this.id = id;
 		this.nombre = nombre;
 		this.tipoSociedad = tipoSociedad;
 		this.cif = cif;
@@ -100,5 +102,9 @@ public class Empresa {
 		return "Empresa [id=" + id + ", nombre=" + nombre + ", tipoSociedad=" + tipoSociedad + ", cif=" + cif
 				+ ", tipoActividad=" + tipoActividad + ", fechaConstitucion=" + fechaConstitucion + "]";
 	}
-
+	
+	
+	
+	
+	
 }
