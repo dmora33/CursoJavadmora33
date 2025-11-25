@@ -9,8 +9,10 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
-public class HibernateMain {
+public class HibernateMain2 {
 	public static void main(String[] args) {
+		
+		
 		Transaction tx = null;
 		try {
 			SessionFactory sessionFactory = new Configuration().configure() // Carga hibernate.cfg.xml
