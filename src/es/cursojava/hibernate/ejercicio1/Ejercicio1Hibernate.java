@@ -1,36 +1,52 @@
 package es.cursojava.hibernate.ejercicio1;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
 import es.cursojava.hibernate.ejercicio1.dao.CursoDAO;
 import es.cursojava.hibernate.ejercicio1.entites.Curso;
 import es.cursojava.utils.Utilidades;
+import es.cursojava.utilsDani.LeerArchivoDani;
 
 public class Ejercicio1Hibernate {
 
 	public static void main(String[] args) {
-		insertarCursos();
-		listarCursos();
-		obtenerCursoPorId();
+//		insertarCursos();
+//		listarCursos();
+//		obtenerCursoPorId();
+		List<String> listaFicheroLeido = LeerArchivoDani
+				.leerFichero("C:\\Users\\Tardes\\git\\CursoJavadmora33\\Enunciados\\Hibernate\\cursos.txt");
+		insertarCursos(listaFicheroLeido);
+
 	}
 
-	private static void insertarCursos() {
-		System.out.println("Insertando cursos");
-		Curso curso1 = new Curso("C1", "Curso 1", 100);
-		Curso curso2 = new Curso("C2", "Curso 2", 100);
-		Curso curso3 = new Curso("C3", "Curso 3", 100);
+	private static void insertarCursos(List<String> listaFichero) {
 
-		List<Curso> cursos = Arrays.asList(curso1, curso2, curso3);
-
-		System.out.println("Insertando " + cursos.size() + " cursos");
-		CursoDAO dao = new CursoDAO();
-		for (Curso curso : cursos) {
-			System.out.println("Insertando curso " + curso.getCodigo());
-			dao.guardarCurso(curso);
+		System.out.println("leer lista y separar");
+		for (String linea : listaFichero) {
+			String[] partes = linea.split("\\|");
+			System.out.println(Arrays.toString(partes));
+			Curso curso = new Curso();
+			curso.setCodigo(partes[0].trim());
+			curso.setNombre(partes[1].trim());
+			curso.setDescripcion(partes[2].trim());
+			curso.setHorasTotales(Integer.parseInt(partes[3].trim()));
+			curso.setActivo(Boolean.valueOf(partes[4].trim()));
+			curso.setNivel(partes[5].trim());
+			curso.setCategoria(partes[6].trim());
+			curso.setPrecio(new BigDecimal(partes[7])); // al añadirlo como un objeto un nuevo objeto si lo coge como
+														// String
+			curso.setFechaInicio(LocalDate.parse(partes[8].trim()));
+			curso.setFechaFin(LocalDate.parse(partes[9].trim()));
+			CursoDAO cursoDAO = new CursoDAO();
+			cursoDAO.guardarCurso(curso);
+//  el commit para que haga los cambios....
+			cursoDAO.commitTransaction(); // confirmar cambios y subir a bbdd
+			System.out.println("Cursos insertados correctamente");
 		}
-		dao.commitTransaction();
-		System.out.println("Cursos insertados");
+
 	}
 
 	private static void listarCursos() {

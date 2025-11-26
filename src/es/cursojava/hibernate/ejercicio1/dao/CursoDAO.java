@@ -13,7 +13,7 @@ public class CursoDAO {
 	private Session session;
 	private Transaction transaction;
 	
-	public CursoDAO() {	
+	public CursoDAO() {
 		session = HibernateUtil.getSession();
 		transaction = session.beginTransaction();
 	}
