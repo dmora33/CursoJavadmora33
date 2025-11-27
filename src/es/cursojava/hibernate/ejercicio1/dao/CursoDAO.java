@@ -1,49 +1,27 @@
 package es.cursojava.hibernate.ejercicio1.dao;
 
+import java.time.LocalDate;
 import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-
 import es.cursojava.hibernate.ejercicio1.entites.Curso;
-import es.cursojava.utils.HibernateUtil;
 
-public class CursoDAO {
-	
-	private Session session;
-	private Transaction transaction;
-	
-	public CursoDAO() {
-		session = HibernateUtil.getSession();
-		transaction = session.beginTransaction();
-	}
-	
-	public void guardarCurso(Curso curso) {
-		session.persist(curso);
-	}
-	
-	public void eliminarCurso() {
-		
-	}
+public interface CursoDAO {
+	public void guardarCurso(Curso curso);
 
-	public void actualizarCurso() {
-		
-	}
-	
-	public Curso obtenerCursoPorId(Long id) {
-		return session.get(Curso.class, id);
-	}
-	
-	public List<Curso> obtenerTodosLosCursos() {
-		
-		return session.createQuery("from Curso", Curso.class).list();
-		
-	}
+	public void eliminarCurso(Long id);
 
-	public void commitTransaction() {
-		transaction.commit();
-	}
-	
-	
-	
+	public void actualizarCurso(Curso curso);
+
+	public Curso obtenerCursoPorId(Long id);
+
+	public List<Curso> obtenerTodosLosCursos();
+
+	public List<Curso> obtenerLosCursosActivos(String nombre);
+
+	public List<Curso> obtenerCursosPorNombre(String nombre);
+
+	public List<Curso> informacionPorCategoriaYFechaIncio(String categoria, LocalDate fechaInicio);
+
+	public List<Curso> informacionPorNivelYHorasYFechainicio(String nivel, Integer horasTotales, LocalDate fechaInicio);
+
 }

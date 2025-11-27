@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 
-import es.cursojava.hibernate.ejercicio1.dao.CursoDAO;
+import es.cursojava.hibernate.ejercicio1.dao.CursoDAOimpl;
 import es.cursojava.hibernate.ejercicio1.entites.Curso;
 import es.cursojava.utils.Utilidades;
 import es.cursojava.utilsDani.LeerArchivoDani;
@@ -14,13 +14,26 @@ public class Ejercicio1Hibernate {
 
 	public static void main(String[] args) {
 //		insertarCursos();
-//		listarCursos();
+		// listarCursos();
 //		obtenerCursoPorId();
+		System.out.println("Empezando");
 		List<String> listaFicheroLeido = LeerArchivoDani
 				.leerFichero("C:\\Users\\Tardes\\git\\CursoJavadmora33\\Enunciados\\Hibernate\\cursos.txt");
-		insertarCursos(listaFicheroLeido);
-
+		// insertarCursos(listaFicheroLeido);
+		// filtrarPorFechas();
+		CursoDAOimpl cursoDAO = new CursoDAOimpl();
+		// cursoDAO.commitTransaction();
+		LocalDate fechaInicio = LocalDate.of(2025, 1, 1);
+		List<Curso> cursos = cursoDAO.informacionPorCategoriaYFechaIncio("Programación", fechaInicio);
+		for (Curso curso : cursos) {
+			System.out.println("curso encontrado:" + curso.toString());
+		}
+		List<Curso> curso2 = cursoDAO.informacionPorNivelYHorasYFechainicio("Básico", 40, fechaInicio);
+		for (Curso curso : curso2) {
+			System.out.println(curso.toString());
+		}
 	}
+	// YA LOS TENGO INSERTADOS
 
 	private static void insertarCursos(List<String> listaFichero) {
 
@@ -40,7 +53,7 @@ public class Ejercicio1Hibernate {
 														// String
 			curso.setFechaInicio(LocalDate.parse(partes[8].trim()));
 			curso.setFechaFin(LocalDate.parse(partes[9].trim()));
-			CursoDAO cursoDAO = new CursoDAO();
+			CursoDAOimpl cursoDAO = new CursoDAOimpl();
 			cursoDAO.guardarCurso(curso);
 //  el commit para que haga los cambios....
 			cursoDAO.commitTransaction(); // confirmar cambios y subir a bbdd
@@ -49,9 +62,25 @@ public class Ejercicio1Hibernate {
 
 	}
 
+	public static void filtrarPorFechas() {
+
+		CursoDAOimpl dao = new CursoDAOimpl();
+
+		// Definir el rango de fechas
+		LocalDate fechaDesde = LocalDate.of(2025, 1, 1);
+		LocalDate fechaHasta = LocalDate.of(2025, 2, 1);
+
+		// Llamar al método
+		List<Curso> cursos = dao.buscarPorRangoFechaInicio(fechaDesde, fechaHasta);
+
+		// Mostrar resultados
+		System.out.println("Cursos con fecha de inicio entre " + fechaDesde + " y " + fechaHasta + ":");
+		cursos.forEach(System.out::println);
+	}
+
 	private static void listarCursos() {
 		System.out.println("Listando cursos");
-		CursoDAO dao = new CursoDAO();
+		CursoDAOimpl dao = new CursoDAOimpl();
 		List<Curso> cursos = dao.obtenerTodosLosCursos();
 		for (Curso curso : cursos) {
 			System.out.println("Curso: " + curso.getCodigo() + " - " + curso.getNombre());
@@ -61,7 +90,7 @@ public class Ejercicio1Hibernate {
 
 	private static void obtenerCursoPorId() {
 		int id = Utilidades.pideDatoNumerico("Introduce el id del curso a buscar: ");
-		CursoDAO dao = new CursoDAO();
+		CursoDAOimpl dao = new CursoDAOimpl();
 		Curso curso = dao.obtenerCursoPorId(Long.valueOf(id));
 		if (curso != null) {
 			System.out.println("Curso encontrado: " + curso.getCodigo() + " - " + curso.getNombre());
