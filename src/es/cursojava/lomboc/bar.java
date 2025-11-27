@@ -7,5 +7,17 @@ public class bar {
 		Botella botella = new Botella(1000, "vidrio", "botella", "ceveza");
 System.out.println(botella);
 	}
+	
+				
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+					
 }
