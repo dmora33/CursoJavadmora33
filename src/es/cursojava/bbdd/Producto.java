@@ -37,4 +37,87 @@ public class Producto {
 		this.iva = iva;
 	}
 
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object getNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public int getStock() {
+		return stock;
+	}
+
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+
+	public Date getFecha_alta() {
+		return fecha_alta;
+	}
+
+	public void setFecha_alta(Date fecha_alta) {
+		this.fecha_alta = fecha_alta;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCodigo_sku() {
+		return codigo_sku;
+	}
+
+	public void setCodigo_sku(String codigo_sku) {
+		this.codigo_sku = codigo_sku;
+	}
+
+	public String getCreado_por() {
+		return creado_por;
+	}
+
+	public void setCreado_por(String creado_por) {
+		this.creado_por = creado_por;
+	}
+
+	public int getIva() {
+		return iva;
+	}
+
+	public void setIva(int iva) {
+		this.iva = iva;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+
 }

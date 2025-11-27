@@ -14,10 +14,18 @@ import lombok.ToString.Exclude;
 @Builder
 public class Botella {
 
+	public Botella(int i, String string, String string2, String string3) {
+		// TODO Auto-generated constructor stub
+	}
 	private double capacidad;
 	private String material;
 	private String forma;
 	@Exclude
 	private String contenido;
 
+	
+	
+	
+	
+	
 }
