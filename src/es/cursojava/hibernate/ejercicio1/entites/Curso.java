@@ -89,8 +89,15 @@ public class Curso implements Serializable {
         this.horasTotales = horasTotales;
         this.activo = Boolean.TRUE;
     }
+    
 
-    // Getters and setters
+    public Curso(@NotNull @NotBlank @Size(max = 100) String nombre, @Size(max = 1000) String descripcion) {
+		super();
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+	}
+
+	// Getters and setters
     public Long getId() {
         return id;
     }

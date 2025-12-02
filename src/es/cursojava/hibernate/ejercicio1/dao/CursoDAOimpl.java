@@ -1,6 +1,7 @@
 package es.cursojava.hibernate.ejercicio1.dao;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -127,5 +128,47 @@ public class CursoDAOimpl implements CursoDAO {
 		return query.list();
 
 	}
+
+	public List<Curso> obtenerNobreDescripcionCurso() {
+		// devuelve un listado de arrays donde cadaposc es el campo que vamos pidiendo
+		// en su orden.0 c.nombre 1 c.descrip...... de cada array, un array por cada
+		// registro.
+		// es un listado de arrays de objet .... que engloba todos los tipos de campos.
+
+		List<Object[]> datos = session.createQuery("select c.nombre, c.descripcion from Curso c").list();
+		List<Curso> cursos = new ArrayList<>();
+		for (Object[] fila : datos) {
+			String nombre = (String) fila[0];
+			String descripcion = (String) fila[1];
+			Curso curso = new Curso(nombre, descripcion);
+			cursos.add(curso);
+			System.out.println("Nombre: " + nombre + ", Descripcion: " + descripcion);
+		}
+		return cursos;
+	}
+	
+	// Método que devuelve una lista de objetos Curso con solo nombre y descripción
+	public List<Curso> obtenerNombreDescripcionCursos2() {
+	    
+	    // Se construye una consulta HQL (Hibernate Query Language).
+	    // La consulta usa "select new ..." para crear instancias de la clase Curso
+	    // pero solo inicializando los atributos nombre y descripción.
+	    // Esto requiere que la clase Curso tenga un constructor que reciba (String nombre, String descripcion).
+	    String hqlQuery = "select new " 
+	        + "es.cursojava.hibernate.ejercicio1.entites.Curso(c.nombre, c.descripcion ) "
+	        + "from Curso c order by c.nombre asc";
+	    
+	    // Se ejecuta la consulta HQL en la sesión de Hibernate.
+	    // - session.createQuery(hqlQuery, Curso.class): crea la consulta tipada para devolver objetos Curso.
+	    // - setMaxResults(3): limita el resultado a un máximo de 3 registros.
+	    // - list(): obtiene la lista de resultados.
+	    List<Curso> cursos = session.createQuery(hqlQuery, Curso.class)
+	                                .setMaxResults(3)
+	                                .list();
+	    
+	    // Se devuelve la lista de cursos obtenida.
+	    return cursos;
+	}
+
 
 }
