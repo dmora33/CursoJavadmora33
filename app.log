@@ -455,3 +455,16 @@ https://docs.oracle.com/error-help/db/ora-01017/
 16:19:19.307 [main] DEBUG org.mongodb.driver.connection - Connection closed: address=ac-p6elzby-shard-00-01.tmnrdrf.mongodb.net:27017, driver-generated ID=7. Reason: Connection pool was closed.
 16:19:19.308 [main] DEBUG org.mongodb.driver.connection - Connection pool closed for ac-p6elzby-shard-00-01.tmnrdrf.mongodb.net:27017
 16:19:19.328 [main] DEBUG org.mongodb.driver.connection - Connection pool closed for ac-p6elzby-shard-00-00.tmnrdrf.mongodb.net:27017
+20:33:04.444 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:34:10.476 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:35:07.752 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:41:39.864 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:45:38.013 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+20:46:27.403 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:29:29.483 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:31:39.267 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:31:53.702 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:32:57.208 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:33:42.484 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:34:19.960 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider
+19:39:49.114 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider

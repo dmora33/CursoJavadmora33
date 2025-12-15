@@ -19,7 +19,7 @@
 
 		<!-- Crear y borrar la base de datos en cada ejecución -->
 		<!-- <property name="hibernate.hbm2ddl.auto">create-drop</property> -->
-		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
 
 		<!-- none(Por defecto en Hibernate 5.2+) No realiza ninguna acción sobre 
 			el esquema. validate: Comprueba que las tablas y columnas existen y coinciden 
@@ -33,10 +33,19 @@
 			(Hibernate 5.5+). -->
 		<!-- Entidad mapeada -->
 
-		<!-- <mapping class="es.cursojava.hibernate.Empresa" /> Añadimos el mapping 
-			para la entidad Curso <mapping class="es.cursojava.hibernate.ejercicio1.entites.Curso" 
-			/> -->
+		<mapping class="es.cursojava.hibernate.Empresa" />
+		<!-- Añadimos el mapping para la entidad Curso -->
 		<mapping
-			class=" es.cursojava.hibernate.ejercicio2.entites.Empleados" />
+			class="es.cursojava.hibernate.ejercicio1.entites.Curso" />
+		<mapping
+			class="es.cursojava.hibernate.ejercicio2.entites.Empleado" />
+		<mapping class="es.cursojava.hibernate.entities.Autor" />
+		<mapping class="es.cursojava.hibernate.entities.Book" />
+		<mapping
+			class="es.cursojava.hibernate.entities.CarnetBiblioteca" />
+		<mapping class="es.cursojava.hibernate.entities.Cliente" />
+		<mapping class="es.cursojava.hibernate.entities.Estudiante" />
+		<mapping class="es.cursojava.hibernate.entities.Pedido" />
+
 	</session-factory>
 </hibernate-configuration>

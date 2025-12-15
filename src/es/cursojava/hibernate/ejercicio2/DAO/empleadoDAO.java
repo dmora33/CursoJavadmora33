@@ -13,7 +13,7 @@ public class empleadoDAO implements Empleabilidad {
 	private Transaction transaction;
 
 	public empleadoDAO() {
-		session = HibernateUtil.getSession();
+		session = HibernateUtil.getSessionFactory();
 		transaction = session.beginTransaction();
 	}
 

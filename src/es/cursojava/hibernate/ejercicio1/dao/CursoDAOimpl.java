@@ -17,7 +17,7 @@ public class CursoDAOimpl implements CursoDAO {
 	private Transaction transaction;
 
 	public CursoDAOimpl() {
-		session = HibernateUtil.getSession();
+		session = HibernateUtil.getSessionFactory();
 		transaction = session.beginTransaction();
 	}
 
@@ -146,29 +146,27 @@ public class CursoDAOimpl implements CursoDAO {
 		}
 		return cursos;
 	}
-	
+
 	// Método que devuelve una lista de objetos Curso con solo nombre y descripción
 	public List<Curso> obtenerNombreDescripcionCursos2() {
-	    
-	    // Se construye una consulta HQL (Hibernate Query Language).
-	    // La consulta usa "select new ..." para crear instancias de la clase Curso
-	    // pero solo inicializando los atributos nombre y descripción.
-	    // Esto requiere que la clase Curso tenga un constructor que reciba (String nombre, String descripcion).
-	    String hqlQuery = "select new " 
-	        + "es.cursojava.hibernate.ejercicio1.entites.Curso(c.nombre, c.descripcion ) "
-	        + "from Curso c order by c.nombre asc";
-	    
-	    // Se ejecuta la consulta HQL en la sesión de Hibernate.
-	    // - session.createQuery(hqlQuery, Curso.class): crea la consulta tipada para devolver objetos Curso.
-	    // - setMaxResults(3): limita el resultado a un máximo de 3 registros.
-	    // - list(): obtiene la lista de resultados.
-	    List<Curso> cursos = session.createQuery(hqlQuery, Curso.class)
-	                                .setMaxResults(3)
-	                                .list();
-	    
-	    // Se devuelve la lista de cursos obtenida.
-	    return cursos;
-	}
 
+		// Se construye una consulta HQL (Hibernate Query Language).
+		// La consulta usa "select new ..." para crear instancias de la clase Curso
+		// pero solo inicializando los atributos nombre y descripción.
+		// Esto requiere que la clase Curso tenga un constructor que reciba (String
+		// nombre, String descripcion).
+		String hqlQuery = "select new " + "es.cursojava.hibernate.ejercicio1.entites.Curso(c.nombre, c.descripcion ) "
+				+ "from Curso c order by c.nombre asc";
+
+		// Se ejecuta la consulta HQL en la sesión de Hibernate.
+		// - session.createQuery(hqlQuery, Curso.class): crea la consulta tipada para
+		// devolver objetos Curso.
+		// - setMaxResults(3): limita el resultado a un máximo de 3 registros.
+		// - list(): obtiene la lista de resultados.
+		List<Curso> cursos = session.createQuery(hqlQuery, Curso.class).setMaxResults(3).list();
+
+		// Se devuelve la lista de cursos obtenida.
+		return cursos;
+	}
 
 }

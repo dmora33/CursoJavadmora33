@@ -4,12 +4,17 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
+import es.cursojava.hibernate.ejercicioOneToManyFichero.entites.Alumno;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMin;
@@ -25,232 +30,241 @@ import jakarta.validation.constraints.AssertTrue;
 @Table(name = "TB_CURSO")
 public class Curso implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id; // obligatorio, PK, autoincremental
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id; // obligatorio, PK, autoincremental
 
-    @NotNull
-    @NotBlank
-    @Size(max = 20)
-    @Column(name = "codigo", nullable = false, unique = true, length = 20)
-    private String codigo; // obligatorio, único, max 20
+	@NotNull
+	@NotBlank
+	@Size(max = 20)
+	@Column(name = "codigo", nullable = false, unique = true, length = 20)
+	private String codigo; // obligatorio, único, max 20
 
-    @NotNull
-    @NotBlank
-    @Size(max = 100)
-    @Column(name = "nombre", nullable = false, length = 100)
-    private String nombre; // obligatorio, no vacío, max 100
+	@NotNull
+	@NotBlank
+	@Size(max = 100)
+	@Column(name = "nombre", nullable = false, length = 100)
+	private String nombre; // obligatorio, no vacío, max 100
 
-    @Size(max = 1000)
-    @Column(name = "descripcion", length = 1000)
-    private String descripcion; // opcional, max 1000
+	@OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Alumno> alumnos = new ArrayList<>();
 
-    @NotNull
-    @Min(1)
-    @Column(name = "horas_totales", nullable = false)
-    private Integer horasTotales; // obligatorio, entero positivo (>0)
+	@Size(max = 1000)
+	@Column(name = "descripcion", length = 1000)
+	private String descripcion; // opcional, max 1000
 
-    @NotNull
-    @Column(name = "activo", nullable = false)
-    private Boolean activo = Boolean.TRUE; // obligatorio, por defecto true
+	@NotNull
+	@Min(1)
+	@Column(name = "horas_totales", nullable = false)
+	private Integer horasTotales; // obligatorio, entero positivo (>0)
 
-    @Size(max = 20)
-    @Column(name = "nivel", length = 20)
-    private String nivel; // opcional, max 20
+	@NotNull
+	@Column(name = "activo", nullable = false)
+	private Boolean activo = Boolean.TRUE; // obligatorio, por defecto true
 
-    @Size(max = 50)
-    @Column(name = "categoria", length = 50)
-    private String categoria; // opcional, max 50
+	@Size(max = 20)
+	@Column(name = "nivel", length = 20)
+	private String nivel; // opcional, max 20
 
-    @PositiveOrZero
-    @Column(name = "precio")
-    private BigDecimal precio; // opcional, >= 0
+	@Size(max = 50)
+	@Column(name = "categoria", length = 50)
+	private String categoria; // opcional, max 50
 
-    @Column(name = "fecha_inicio")
-    private LocalDate fechaInicio; // opcional
+	@PositiveOrZero
+	@Column(name = "precio")
+	private BigDecimal precio; // opcional, >= 0
 
-    @Column(name = "fecha_fin")
-    private LocalDate fechaFin; // opcional, si existe >= fechaInicio
+	@Column(name = "fecha_inicio")
+	private LocalDate fechaInicio; // opcional
 
-    @NotNull
-    @Column(name = "fecha_creacion", nullable = false)
-    private LocalDateTime fechaCreacion; // obligatorio, set en PrePersist
+	@Column(name = "fecha_fin")
+	private LocalDate fechaFin; // opcional, si existe >= fechaInicio
 
-    // Constructors
-    public Curso() {
-        // JPA
-    }
+	@NotNull
+	@Column(name = "fecha_creacion", nullable = false)
+	private LocalDateTime fechaCreacion; // obligatorio, set en PrePersist
 
-    public Curso(String codigo, String nombre, Integer horasTotales) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.horasTotales = horasTotales;
-        this.activo = Boolean.TRUE;
-    }
-    
+	// Constructors
+	public Curso() {
+		// JPA
+	}
 
-    public Curso(@NotNull @NotBlank @Size(max = 100) String nombre, @Size(max = 1000) String descripcion) {
+	public Curso(String codigo, String nombre, Integer horasTotales) {
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.horasTotales = horasTotales;
+		this.activo = Boolean.TRUE;
+	}
+
+	public Curso(@NotNull @NotBlank @Size(max = 100) String nombre, @Size(max = 1000) String descripcion) {
 		super();
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 	}
 
 	// Getters and setters
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getCodigo() {
-        return codigo;
-    }
+	public List<Alumno> getAlumnos() {
+		return alumnos;
+	}
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
+	public void setAlumnos(List<Alumno> alumnos) {
+		this.alumnos = alumnos;
+	}
 
-    public String getNombre() {
-        return nombre;
-    }
+	public String getCodigo() {
+		return codigo;
+	}
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public Integer getHorasTotales() {
-        return horasTotales;
-    }
+	public String getDescripcion() {
+		return descripcion;
+	}
 
-    public void setHorasTotales(Integer horasTotales) {
-        this.horasTotales = horasTotales;
-    }
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
-    public Boolean getActivo() {
-        return activo;
-    }
+	public Integer getHorasTotales() {
+		return horasTotales;
+	}
 
-    public void setActivo(Boolean activo) {
-        this.activo = activo;
-    }
+	public void setHorasTotales(Integer horasTotales) {
+		this.horasTotales = horasTotales;
+	}
 
-    public String getNivel() {
-        return nivel;
-    }
+	public Boolean getActivo() {
+		return activo;
+	}
 
-    public void setNivel(String nivel) {
-        this.nivel = nivel;
-    }
+	public void setActivo(Boolean activo) {
+		this.activo = activo;
+	}
 
-    public String getCategoria() {
-        return categoria;
-    }
+	public String getNivel() {
+		return nivel;
+	}
 
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
+	public void setNivel(String nivel) {
+		this.nivel = nivel;
+	}
 
-    public BigDecimal getPrecio() {
-        return precio;
-    }
+	public String getCategoria() {
+		return categoria;
+	}
 
-    public void setPrecio(BigDecimal precio) {
-        this.precio = precio;
-    }
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
 
-    public LocalDate getFechaInicio() {
-        return fechaInicio;
-    }
+	public BigDecimal getPrecio() {
+		return precio;
+	}
 
-    public void setFechaInicio(LocalDate fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
+	public void setPrecio(BigDecimal precio) {
+		this.precio = precio;
+	}
 
-    public LocalDate getFechaFin() {
-        return fechaFin;
-    }
+	public LocalDate getFechaInicio() {
+		return fechaInicio;
+	}
 
-    public void setFechaFin(LocalDate fechaFin) {
-        this.fechaFin = fechaFin;
-    }
+	public void setFechaInicio(LocalDate fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
 
-    public LocalDateTime getFechaCreacion() {
-        return fechaCreacion;
-    }
+	public LocalDate getFechaFin() {
+		return fechaFin;
+	}
 
-    public void setFechaCreacion(LocalDateTime fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
+	public void setFechaFin(LocalDate fechaFin) {
+		this.fechaFin = fechaFin;
+	}
 
-    // Validation for date consistency: fechaFin must be null or >= fechaInicio
-    @AssertTrue(message = "fechaFin debe ser igual o posterior a fechaInicio")
-    private boolean isFechaFinValida() {
-        if (fechaFin == null) {
-            return true;
-        }
-        if (fechaInicio == null) {
-            return true; // if inicio not set, we allow fechaFin
-        }
-        return !fechaFin.isBefore(fechaInicio);
-    }
+	public LocalDateTime getFechaCreacion() {
+		return fechaCreacion;
+	}
 
-    @PrePersist
-    private void prePersist() {
-        if (fechaCreacion == null) {
-            fechaCreacion = LocalDateTime.now();
-        }
-        if (activo == null) {
-            activo = Boolean.TRUE;
-        }
-    }
+	public void setFechaCreacion(LocalDateTime fechaCreacion) {
+		this.fechaCreacion = fechaCreacion;
+	}
 
-    // equals/hashCode based on id when present, otherwise codigo
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        return result;
-    }
+	// Validation for date consistency: fechaFin must be null or >= fechaInicio
+	@AssertTrue(message = "fechaFin debe ser igual o posterior a fechaInicio")
+	private boolean isFechaFinValida() {
+		if (fechaFin == null) {
+			return true;
+		}
+		if (fechaInicio == null) {
+			return true; // if inicio not set, we allow fechaFin
+		}
+		return !fechaFin.isBefore(fechaInicio);
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Curso other = (Curso) obj;
-        if (id != null && other.id != null) {
-            return id.equals(other.id);
-        }
-        if (codigo == null) {
-            if (other.codigo != null)
-                return false;
-        } else if (!codigo.equals(other.codigo))
-            return false;
-        return true;
-    }
+	@PrePersist
+	private void prePersist() {
+		if (fechaCreacion == null) {
+			fechaCreacion = LocalDateTime.now();
+		}
+		if (activo == null) {
+			activo = Boolean.TRUE;
+		}
+	}
 
-    @Override
-    public String toString() {
-        return "Curso [id=" + id + ", codigo=" + codigo + ", nombre=" + nombre + ", horasTotales=" + horasTotales
-                + ", activo=" + activo + ", nivel=" + nivel + ", categoria=" + categoria + ", precio=" + precio
-                + ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + ", fechaCreacion=" + fechaCreacion
-                + "]";
-    }
+	// equals/hashCode based on id when present, otherwise codigo
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Curso other = (Curso) obj;
+		if (id != null && other.id != null) {
+			return id.equals(other.id);
+		}
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Curso [id=" + id + ", codigo=" + codigo + ", nombre=" + nombre + ", horasTotales=" + horasTotales
+				+ ", activo=" + activo + ", nivel=" + nivel + ", categoria=" + categoria + ", precio=" + precio
+				+ ", fechaInicio=" + fechaInicio + ", fechaFin=" + fechaFin + ", fechaCreacion=" + fechaCreacion + "]";
+	}
 }

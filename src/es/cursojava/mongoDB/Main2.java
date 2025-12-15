@@ -13,7 +13,7 @@ public class Main2 {
 
 		// Crear cliente
 		try (MongoClient mongoClient = MongoClients.create(uri)) {
-
+				
 			// Acceder a una base de datos
 			MongoDatabase database = mongoClient.getDatabase("getafemongodb");
 

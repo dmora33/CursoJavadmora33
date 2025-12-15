@@ -21,6 +21,16 @@ public class Main {
 			// Leer un documento
 			Document doc = collection.find().first();
 			System.out.println("Primer documento: " + doc);
+			
+			
+			// insertar
+				Document newUser = new Document("nombre", "Juan")
+					.append("edad", 30)
+					.append("email", "ulima");
+				collection.insertOne(newUser);
+				System.out.println("Documento insertado: " + newUser.toJson());
+				
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();

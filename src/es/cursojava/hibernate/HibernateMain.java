@@ -30,10 +30,10 @@ public class HibernateMain {
             
             tx.commit();
             
-            List<Empresa> empresas = session.createQuery("from Empresa", Empresa.class).list();
-            for (Empresa empresa : empresas) {
-				System.out.println(empresa);
-			}
+//            List<Empresa> empresas = session.createQuery("from Empresa", Empresa.class).list();
+//            for (Empresa empresa : empresas) {
+//				System.out.println(empresa);
+//			}
             
             
         } catch (Throwable ex) {
