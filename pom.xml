@@ -100,7 +100,12 @@
 			<artifactId>spring-context</artifactId>
 		</dependency>
 
-		
+
+<!--		<dependency>-->
+<!--			<groupId>es.cursojava</groupId>-->
+<!--			<artifactId>proyectoweb</artifactId>-->
+<!--			<version>0.0.1-SNAPSHOT</version>-->
+<!--		</dependency>-->
   </dependencies>
   
   

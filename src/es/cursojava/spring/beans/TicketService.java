@@ -10,6 +10,7 @@ public class TicketService {
 	private final Ticket provider;
 
 	public TicketService(Ticket provider) {
+		System.out.println("TicketService creado con provider: " + provider);
 		this.provider = provider;
 	}
 

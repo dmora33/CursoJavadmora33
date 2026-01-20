@@ -40,6 +40,7 @@ public class MainComentado {
             // ================================
             // Si LazyBean tiene @Lazy, Spring NO lo crea al iniciar el contexto,
             // sino solo cuando se solicita explícitamente.
+            // y  es SINGLETON por defecto.
             /*
             System.out.println("Contexto arrancado.");
             System.out.println("Pido LazyBean...");
