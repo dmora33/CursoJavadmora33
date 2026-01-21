@@ -8,10 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import es.cursojava.spring.Operacion;
+import es.cursojava.spring.beans.aspects.SoloAdmin;
 
 @Service
 public class CalculadoraService {
-	private final Map<String, Operacion> operaciones = new HashMap<>();
+	private final Map<String, Operacion> operaciones = new HashMap<>();  // hacemos el new par que no de error por que si esta final tiene que inicializarse
 	
 	@Autowired
 	public CalculadoraService(List<Operacion> operacionesList) {
@@ -19,6 +20,7 @@ public class CalculadoraService {
 			operaciones.put(operacion.getSimbolo(), operacion);
 		}
 	}
+	@SoloAdmin
 	public double calcular(String simbolo, double a, double b) {
 		Operacion operacion = operaciones.get(simbolo);
 		if (operacion == null) {
